@@ -1,0 +1,109 @@
+.partnerlogo-box {
+  position: relative;
+  overflow: hidden;
+  width: 1140px;
+  margin: 0 auto -96px;
+  padding: 40px 0 80px;
+}
+
+.partnerlogo-box::before, .partnerlogo-box::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+  content: "";
+}
+
+.partnerlogo-box::before { /*왼쪽 끝부분에 흐릿한 효과 줌*/
+  left: 0;
+  width: 238px;
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0), #fff 59%, #fff 1%);
+}
+
+.partnerlogo-box::after { /*오른쪽 끝부분에 흐릿한 효과 줌*/
+  right: 0;
+  width: 110px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 47%, #fff 95%);
+}
+
+.partnerlogo-title {
+  float: left;
+  position: relative;
+  z-index: 1;
+  margin-top: 15px;
+  font-family: 'galmat';
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 34px;
+  letter-spacing: -0.5px;
+}
+
+.partnerlogo-link {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.partnerlogo-list { /*로고리스트에 애니메이션을 준다. / 이름은 move_left / 시간은 60초 /속도 조절은 평균 / 무한 반복/ */
+  animation: move_left 50s linear infinite;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+@keyframes move_left {
+  0% {
+    transform: translateX(0); /*x축이 0에서 시작해서*/
+  }
+  100% {
+    transform: translateX(-50%); /*100% = 끝날 때 x축이 -50퍼 이동한다.*/
+  }
+}
+
+.partnerlogo-list:hover  { /*마우스를 올리면 애니메이션이 멈춘다.*/
+  animation-play-state: paused;
+}
+
+.partnerlogo-list-img {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  padding: 6px;
+  background-color: #fff;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-origin: content-box;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: top;
+  background-image: url(../img/heart.png);
+}
+.partnerlogo-list a:last-child{ /*끝나는 지점 구분용 */
+  background-color: black;
+}
+
+.partnerlogo-list-img ~ .partnerlogo-list-img {
+  margin-left: 28px;
+}
+
+.partnerlogo-list-img::before {
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  margin-left: -1px;
+  vertical-align: middle;
+  content: "";
+}
+
+.partnerlogo-list-img::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  content: "";
+}
+

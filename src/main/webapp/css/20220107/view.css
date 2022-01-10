@@ -1,0 +1,580 @@
+/****************************** ICON ******************************/
+.ir, .ir-b:before, .ir-a:after {display:inline-block;vertical-align:middle;background-position:999px 999px;background-repeat:no-repeat;font-size:0;}
+.ir-b:before, .ir-a:after { content:''; }
+.ir { padding:0; margin:0; white-space:nowrap; font-size:1px; overflow:hidden; text-indent:-999px; color:transparent; line-height:0; }
+
+.i-help { position:relative; width:21px; height:21px; background:#ff5000 !important; color:#fff; border-radius:100%; vertical-align:top; }
+.i-help::before { content:'?'; position:absolute; left:0; right:0; top:0; text-align:center; font-size:13px; font-weight:700; line-height:21px; text-indent:0; }
+.i-arr-go::after { margin:0 0 1px 7px; width:6px; height:6px; border:0 solid #666; border-width:2px 2px 0 0; transform:rotate(45deg); background:none !important; }
+.i-arr-go.ty-i::after { border-color:#ff5000; }
+
+
+/*메인 박스 */
+.contents {
+    max-width: 1440px; /*1140px으로 변경 여부*/
+    padding: 88px 20px 130px;
+    margin: 0 auto;
+}
+
+.contents a, button, :before, :after {
+    transition: background-color .3s, border .3s, color .3s, margin .3s;
+}
+
+/*메뉴 창--------------------------------------------------------*/
+.swipe-initialized {
+    position: relative;
+    overflow: hidden;
+    cursor: move;
+}
+
+.tab-3 {
+    position: relative;
+    margin: 25px -20px 30px;
+    font-size: 0;
+    color: #888;
+    text-align: center;
+}
+
+.tab-3 { /*@media 1200px 일때*/
+    margin: 43px 0 50px;
+}
+
+.contents > .tab-3:first-child { /*@media 1200px 일때*/
+    margin-top: -88px;
+    margin-bottom: 88px;
+}
+
+.tab-3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: #c8c8c8;
+}
+
+.swipe-initialized {
+    position: relative;
+    overflow: hidden;
+    cursor: move;
+}
+
+.tab-3 {
+    position: relative;
+    margin: 25px -20px 30px;
+    font-size: 0;
+    color: #888;
+    text-align: center;
+}
+
+.tab-3 ul {
+    display: flex;
+}
+
+.swipe-initialized .swipe-cont {
+    position: relative;
+    white-space: nowrap;
+}
+
+.tab-3 .item {
+    flex: 1;
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+}
+
+.tab-3 .item {
+    font-size: 20px;
+}
+
+.tab-3 a {
+    display: block;
+    padding: 5px 15px;
+    height: 100%;
+}
+
+.tab-3 .item a::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    min-height: 33px;
+    height: 100%;
+    margin-right: -1px;
+    vertical-align: middle;
+    transition: min-height .3s;
+}
+
+.tab-3 .item a::before {
+    min-height: 50px;
+}
+
+.tab-3 .item .in {
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 3px;
+}
+
+/*클릭 한 메뉴 */
+.tab-3 .item.active {
+    z-index: 2;
+    color: #000;
+    font-weight: 700;
+}
+
+.tab-3 .item.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: #ff5000;
+}
+
+.tab-3 .item.active::before {
+    height: 3px;
+}
+
+/*페이지 틀 및 제목---------------------------------------------------*/
+.board-view.ty-2 {
+    padding-right: 360px;
+    width: 1140px;
+    margin: 0 auto;
+    z-index: 100;
+}
+.board-view {
+    position: relative;
+}
+
+/*제목*/
+.board-title {
+    position: relative;
+    margin: 0 0 27px;
+}
+
+.board-title {
+    padding-top: 9px;
+    margin-bottom: 25px;
+}
+.board-title .title {
+    font-size: 42px;
+    line-height: 1.28;
+    color: #000;
+    font-weight: inherit; /*글씨 얇게*/
+}
+
+.board-title .title-sub {
+    margin-top: 16px;
+    font-size: 24px;
+    line-height: 1.33;
+    color: #000;
+}
+
+.board-title .date {
+    display: block;
+    margin-top: 44px;
+    font-size: 16px;
+    line-height: 1;
+    color: #888;
+    font-weight: 500;
+    font-family: 'Montserrat';
+}
+/*내용-----------------------------------------*/
+
+.board-side { /*기부 박스 위치 조정*/
+    position: static;
+    margin: 0px -510px 0 auto;
+    
+    display: inline-block;
+    position: sticky;
+    top: 120px;
+    width: 80px;
+    height: 80px;
+}
+
+.board-side, .board-side .inner { /*기부박스 위치조정*/
+    width: 320px;
+}
+
+.board-side .inner {
+    position: absolute;
+    top: -233%;
+    padding-top: 113px;
+    left: 300%;
+}
+
+/*왼쪽 기부 창*/
+.board-side .total {
+    position: relative;
+    margin: -63px 0 23px;
+    white-space: nowrap;
+    text-align: right;
+    font-size: 15px;
+    line-height: 1;
+    color: #ff5000;
+    font-family: 'Montserrat';
+}
+
+.board-side .total {
+    margin-top: -85px;
+    margin-bottom: 50px;
+}
+
+.board-side .total:first-child, .board-side .total {
+    margin-top: 40px;
+    padding: 0 0 32px;
+    border-bottom: 1px solid #ddd;
+}
+
+.board-side .total .value {
+    position: absolute;
+    top: 24px;
+    right: 0;
+    z-index: 3;
+    width: 91px;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+}
+.board-side .total .value {
+    top: 35px; /*높이 일단 보류 */
+    right: 18px;
+    width: 125px;
+    font-size: 18px;
+}
+
+.board-side .total:first-child .value, .board-side .total .value { /*뭔지 잘 모름*/
+    width: auto;
+    left: 0;
+    right: 0;
+}
+
+.board-side .total .num {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.board-side .total .progress-3 {
+    position: relative;
+    display: block;
+    margin: 0 0 0 auto;
+    width: 91px;
+    height: 81px;
+}
+
+.board-side .total .progress-3 {
+    margin-right: 18px;
+    width: 128px;
+    height: 112px;
+}
+
+.board-side .total:first-child .progress-3, .board-side .total .progress-3 {
+    margin-right: auto;
+}
+
+.ir, .ir-b:before, .ir-a:after {
+    background-image: url(../img/btn-total.png);
+    background-size: 500px 500px;
+}
+
+.i-progress-3:before {
+    background-position: 0px -250px;
+    width: 128px;
+    height: 120px;
+}
+
+.board-side .total .progress-3::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.board-side .total .progress-3 .fill {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+}
+
+.i-progress-3-fill:before {
+    background-position: -132px -250px;
+    width: 128px;
+    height: 112px;
+}
+.board-side .total .progress-3 .fill::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+/*글자 칸*/
+.board-side .text {
+    font-size: 16px;
+    line-height: 35px;
+    color: #555;
+}
+.board-side .text dt {
+    float: left;
+    clear: both;
+    margin-top: 9px;
+}
+
+.board-side .text dt:first-child, .board-side .text dt:first-child + dd {
+    margin-top: 0;
+}
+.board-side .text dt .ir-b {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 33px;
+    font-size: 0;
+    margin-right: 7px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+}
+.board-side .text dt .ir-b {
+    width: 42px;
+    height: 42px;
+    line-height: 40px;
+    margin-right: 9px;
+}
+.i-num-give-2::before {
+    background-position: -457px 1px;
+    width: 16px;
+    height: 16px;
+    margin: 0 7px 4px 0;
+}
+.i-num-person-2::before {
+    background-position: -439px 0px;
+    width: 16px;
+    height: 17px;
+    margin: 0 7px 4px 0;
+}
+.i-num-goal::before {
+    background-position: -474px 1px;
+    width: 16px;
+    height: 17px;
+    margin: 0 7px 4px 0;
+}
+.board-side .text dt .ir-b::before {
+    margin: 0;
+}
+.board-side .text dt .i-num-give-2::before {
+    margin-top: 2px;
+}
+.board-side .text dd {
+    float: right;
+    margin-top: 14px;
+}
+.board-side .text .num {
+    margin-left: 11px;
+    font-size: 21px;
+    line-height: 1;
+    color: #222;
+    font-family: 'Montserrat';
+}
+.board-side .text .num {
+    font-size: 30px;
+    margin-left: 6px;
+}
+.board-side .text::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+/*후원하기 버튼*/
+.board-side .control {
+    display: flex;
+    position: relative;
+    margin: 27px 0 0;
+}
+.board-side .control .share {
+    flex: none;
+    margin-right: 10px;
+}
+.board-side .control .btn-share {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 5px;
+    width: 70px;
+    height: 70px;
+    line-height: 68px;
+    background: #eee;
+    font-size: 0;
+    border: 1px solid #ddd;
+}
+.i-share {
+    background-position: -464px -14px;
+    width: 30px;
+    height: 30px;
+}
+
+.share-cont {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 9999;
+    width: 320px;
+    padding: 28px 19px 20px;
+    margin-top: 10px;
+    background: #fff;
+    border: 1px solid #d8d8d8;
+}
+.share-cont .show {
+    display: block;
+}
+
+
+.board-side .control .share-cont {
+    top: auto;
+    bottom: 100%;
+    margin-bottom: 16px;
+    text-align: center;
+}
+.share-cont .item {
+    display: inline-block;
+    font-size: 14px;
+}
+.i-facebook-2, .i-twitter-2, .i-kakao {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+}
+.share-cont .item .ir-b {
+    display: block;
+    margin: 0 auto 7px;
+}
+.i-facebook-2::before { 
+    background-position: -290px -131px;
+    width: 60px;
+    height: 50px;
+}
+.i-twitter-2::before { 
+    background-position: -345px -131px;
+    width:60px; 
+    height:50px; 
+}
+.i-kakao::before { 
+    background-position: -400px -131px;
+    width:60px; 
+    height:50px; 
+}
+
+.share-in button {
+    cursor: pointer;
+    width: auto;
+    overflow: visible;
+    color: inherit;
+    vertical-align: middle;
+    background: transparent;
+    border: none;
+    box-sizing: border-box;
+}
+.share-cont .copy {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 40px;
+    line-height: 38px;
+    margin-top: 18px;
+    padding: 0 12px;
+    text-align: left;
+    border: 1px solid #dbdbdb;
+    background: #f7f7f7;
+    font-size: 12px;
+}
+.share-cont .copy::before {
+    content: attr(title);
+    color: #8b8b8b;
+}
+.share-cont .copy .in-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 69px;
+    text-align: center;
+    border-left: 1px solid #dbdbdb;
+    background: #fff;
+}
+.board-side .control > button {
+    flex: 1;
+}
+.board-side .control .btn-act {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 5px;
+    width: 100%;
+    height: 63px;
+    background: #ff5000;
+    font-size: 21px;
+    line-height: 63px;
+    color: #fff;
+}
+.board-side .control .btn-act {
+    height: 70px;
+    font-size: 20px;
+    line-height: 70px;
+}
+/*목록 버튼*/
+.btn-area {
+    position: relative;
+    display: flex;
+    margin: 30px -2px 0 -3px;
+    justify-content: center;
+}
+.btn-area {
+    margin-top: 40px;
+    text-align: center;
+}
+.btn-5 {
+    width: 100%;
+    height: 55px;
+    border: solid 1px #ddd;
+    background-color: #f2f2f2;
+    font-size: 18px;
+    line-height: 53px;
+    color: #000;
+}
+.btn-1, .btn-5, .btn-7, .btn-8 {
+    width: auto;
+    min-width: 160px;
+    height: 52px;
+    font-size: 16px;
+    line-height: 50px;
+}
+.btn-5 {
+    padding: 0 20px;
+}
+.btn-area [class*="btn-"] {
+    flex: none;
+    margin: 0 10px;
+}
+.btn-area > [class*="btn-"] {
+    position: relative;
+    z-index: 2;
+}
+.board-content {
+    margin: 33px 0 30px;
+    padding: 40px 0;
+    font-size: 13px;
+    line-height: 1.53;
+    color: #555;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    min-height: 60px;
+}
+
+.board-content {
+    margin: 25px 0 30px;
+    padding: 50px 0 60px;
+    font-size: 16px;
+    line-height: 1.75;
+}

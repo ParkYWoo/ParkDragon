@@ -1,0 +1,196 @@
+.mainbanner-box {
+  overflow: hidden;
+  position: relative;
+  height: 332px;
+}
+  
+.mainbanner-background {
+  position: relative;
+  transition: background-color 0.5s;
+}
+  
+.slick-list { /*.MainBanner_inner__1uvuL .slick-list*/
+  overflow: visible;
+}
+
+.mainbanner-background .slick-prev  { /*왼쪽 버튼 원본: .inner :global(.slick-prev)*/
+  left: 50%;
+  margin: 35px 0 0 -620px;
+}
+
+.mainbanner-background .slick-arrow { /* 배너 왼쪽 위치 원본 : .inner :global(.slick-arrow)*/
+    position: relative;
+    display: inline-block;
+    width: 22px;
+    height: 44px;
+    position: absolute;
+    z-index: 10;
+    padding: 10px;
+    box-sizing: content-box;
+  }
+
+  @media (max-width: 1220px) {
+    .mainbanner-background .slick-prev {
+      background-color: rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  @media (max-width: 1220px) {
+    .mainbanner-background .slick-arrow {
+      background-color: rgba(0, 0, 0, 0.15);
+    }
+  }
+  
+ .slick-prev { /*변환 */
+    margin-left: -570px;
+    left: 50%;
+    margin: 35px 0 0 -620px;
+    background-color: rgba(0,0,0,.15);
+    width: 22px;
+    height: 44px;
+    position: absolute;
+    z-index: 10;
+    padding: 10px;
+    box-sizing: content-box;
+}
+.mainbanner-background .slick-prev{
+  left: 50%;
+    margin: 35px 0 0 -620px;
+    width: 22px;
+    height: 44px;
+    z-index: 10;
+    box-sizing: content-box;
+
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    padding: 10;
+
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: rgba(0,0,0,0);
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    transform: rotate(
+        180deg) translateY(50%);
+}
+
+.mainbanner-background .slick-next {
+    right: 50%;
+    margin: 35px -620px 0 0;
+  /*  transform: rotate(180deg) translateY(50%);*/
+  }
+  
+.mainbanner-background .slick-next { /*변환  MainBanner_inner__1uvuL*/
+  margin-right: -570px;
+}
+.mainbanner-background .slick-next { /*변환  MainBanner_inner__1uvuL*/
+  right: 50%;
+  margin: 35px -620px 0 0;
+  /*-ms-transform: rotate(180deg) translateY(50%); 왼쪽이랑 동일시 하기 위해 파기
+   transform: rotate(180deg) translateY(50%); */
+}
+.slick-next{
+  right: 50%;
+  margin: 35px -620px 0 0;
+  
+  width: 27px;
+  height: 44px;
+  position: absolute;
+  z-index: 10;
+  box-sizing: content-box;
+
+  line-height: 0;
+  top: 50%;
+  display: block;
+  padding: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: rgba(0,0,0,0);
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+  position: relative; /*주변 여부와 관계없이 줘야 배너 위에 위치함*/
+	
+	list-style-type: none;
+}
+.slick-dots ul {
+  position: absolute;
+  text-align: center; /*화면 중앙에 정령하기 위해서 ul에 center 속성 부여*/
+}
+.slick-dots li {
+    display: inline-block; /*화면이 유동적으로 변화해도 중앙에 위치하기위해 li에 inline-block 속성을 주고 ul에 text-align:center를 준다.*/
+}
+.slick-dots button {
+    width: 12px; /*width와 height가 동일해야 원형 유지함*/
+    height: 12px;
+    margin: 0 10px; /*버튼 사이 간격*/
+    padding: 0;
+    
+    border: none;
+    border-radius: 100%; /*버튼을 동그랗게 만들어 줌*/
+    background-color: #d89694fa; /*버튼 색상*/
+    
+    text-indent: -9999px; /*버튼 안의 숫자 지워 줌*/
+    /*box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%); / x축 y축 0해야 보임 rgb(색상값) #% 투명도 */
+    box-shadow: 2px 5px 0 rgb(221 155 155 / 14%), 0 2px 10px 0 rgb(237 87 87 / 77%);
+    border: 2px solid #ffffff;
+}
+
+.slick-dots li.slick-active button { /*리스트 선택이 되면 작동*/
+    background-color: #ffffff;
+}
+.mainbanner-banner-content { /*배너 리스트 내용*/
+  position: relative;
+  display: block!important;
+  width: 1140px!important;
+  height: 300px;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  block-size: auto;
+} 
+.mainbanner-banner-content-link { /*메인베너 a href class */
+  display: block;
+  position: relative;
+  top: 40px;
+  width: 1140px;
+  height: 292px;
+  background-repeat: no-repeat;
+  background-size: auto 292px;
+  background-position: 50%;
+} 
+
+/*배너 뒷배경 색상 변경*/
+
+.mainbanner-background {
+	-webkit-animation: color-change-2x 12s linear infinite alternate both;
+	animation: color-change-2x 12s linear infinite alternate both;
+}
+@-webkit-keyframes color-change-2x {
+    0% {
+        background: #19dcea;
+    }
+    100% {
+        background: #b22cff;
+    }
+}
+@keyframes color-change-2x {
+    0% {
+        background: #19dcea;
+    }
+    100% {
+        background: #b22cff;
+    }
+}

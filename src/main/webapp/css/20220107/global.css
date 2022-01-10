@@ -1,0 +1,452 @@
+@charset "UTF-8";
+@font-face {
+  font-family: NanumSquareWebFont;
+  font-style: normal;
+  font-display: fallback;
+  font-weight: 300;
+  src: url(https://ssl.pstatic.net/happyimg2/font/NanumSquareR.eot);
+  src: local(☺), url(https://ssl.pstatic.net/happyimg2/font/NanumSquareL.woff2) format("woff2"), url(https://ssl.pstatic.net/happyimg2/font/NanumSquareL.woff) format("woff"), url(https://ssl.pstatic.net/happyimg2/font/NanumSquareL.ttf) format("truetype");
+}
+@font-face {
+  font-family: NanumSquareWebFont;
+  font-style: normal;
+  font-display: fallback;
+  font-weight: 400;
+  src: url(https://ssl.pstatic.net/happyimg2/font/NanumSquareR.eot);
+  src: local(☺), url(https://ssl.pstatic.net/happyimg2/font/NanumSquareR.woff2) format("woff2"), url(https://ssl.pstatic.net/happyimg2/font/NanumSquareR.woff) format("woff"), url(https://ssl.pstatic.net/happyimg2/font/NanumSquareR.ttf) format("truetype");
+}
+@font-face {
+  font-family: NanumSquareWebFont;
+  font-style: normal;
+  font-display: fallback;
+  font-weight: 700;
+  src: url(https://ssl.pstatic.net/happyimg2/font/NanumSquareB.eot);
+  src: local(☺), url(https://ssl.pstatic.net/happyimg2/font/NanumSquareB.woff2) format("woff2"), url(https://ssl.pstatic.net/happyimg2/font/NanumSquareB.woff) format("woff"), url(https://ssl.pstatic.net/happyimg2/font/NanumSquareB.ttf) format("truetype");
+}
+@font-face {
+  font-family: NanumSquareWebFont;
+  font-style: normal;
+  font-display: fallback;
+  font-weight: 800;
+  src: url(https://ssl.pstatic.net/happyimg2/font/NanumSquareEB.eot);
+  src: local(☺), url(https://ssl.pstatic.net/happyimg2/font/NanumSquareEB.woff2) format("woff2"), url(https://ssl.pstatic.net/happyimg2/font/NanumSquareEB.woff) format("woff"), url(https://ssl.pstatic.net/happyimg2/font/NanumSquareEB.ttf) format("truetype");
+}
+@font-face {
+  font-family: NanumBarunGothic;
+  font-style: normal;
+  font-display: fallback;
+  font-weight: 300;
+  src: url(https://ssl.pstatic.net/happyimg2/font/NBarunGothicLight.eot);
+  src: local(☺), url(https://ssl.pstatic.net/happyimg2/font/NBarunGothicLight.woff2) format("woff2"), url(https://ssl.pstatic.net/happyimg2/font/NBarunGothicLight.woff) format("woff"), url(https://ssl.pstatic.net/happyimg2/font/NBarunGothicLight.ttf) format("truetype");
+}
+@font-face {
+  font-family: NanumBarunGothic;
+  font-style: normal;
+  font-display: fallback;
+  font-weight: 400;
+  src: url(https://ssl.pstatic.net/happyimg2/font/NBarunGothic.eot);
+  src: local(☺), url(https://ssl.pstatic.net/happyimg2/font/NBarunGothic.woff2) format("woff2"), url(https://ssl.pstatic.net/happyimg2/font/NBarunGothic.woff) format("woff"), url(https://ssl.pstatic.net/happyimg2/font/NBarunGothic.ttf) format("truetype");
+}
+@font-face {
+  font-family: NanumBarunGothic;
+  font-style: normal;
+  font-display: fallback;
+  font-weight: 700;
+  src: url(https://ssl.pstatic.net/happyimg2/font/NBarunGothicBold.eot);
+  src: local(☺), url(https://ssl.pstatic.net/happyimg2/font/NBarunGothicBold.woff2) format("woff2"), url(https://ssl.pstatic.net/happyimg2/font/NBarunGothicBold.woff) format("woff"), url(https://ssl.pstatic.net/happyimg2/font/NBarunGothicBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: NanumMyeongjo;
+  font-style: normal;
+  font-display: fallback;
+  font-weight: 800;
+  src: url(https://ssl.pstatic.net/happyimg2/font/NanumMyeongjoEB.eot);
+  src: local(☺), url(https://ssl.pstatic.net/happyimg2/font/NanumMyeongjoEB.woff2) format("woff2"), url(https://ssl.pstatic.net/happyimg2/font/NanumMyeongjoEB.woff) format("woff"), url(https://ssl.pstatic.net/happyimg2/font/NanumMyeongjoEB.ttf) format("truetype");
+}
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
+  margin: 0;
+  padding: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+  display: block;
+}
+
+body, input, textarea, select, button, table {
+  font-family: NanumBarunGothic, dotum, Sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  color: #202020;
+}
+
+body {
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, fieldset {
+  border: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+em, address {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+i {
+  font-style: normal;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+input, textarea, select, button { /*background-color: transparent; box-shadow: none;appearance: none;*/
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+button, input[type=button], input[type=reset], input[type=submit], input[type=checkbox] + label, input[type=radio] + label {
+  cursor: pointer;
+}
+
+button:disabled, input[type=button]:disabled, input[type=reset]:disabled, input[type=submit]:disabled {
+  cursor: default;
+}
+
+input[type=checkbox]:disabled + label, input[type=radio]:disabled + label {
+  cursor: default;
+}
+
+input[type=checkbox]:focus + label {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.blind {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+/*
+input[type=checkbox], input[type=radio], .blind {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+*/
+  
+[aria-hidden=true]:not(svg) {
+  display: none;
+}
+
+svg {
+  vertical-align: top;
+}
+
+.u_skip {
+  position: relative;
+}
+
+.u_skip a {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 138px;
+  border: 1px solid #4ec53d;
+  background: #333;
+  text-align: center;
+}
+
+.u_skip a:active, .u_skip a:focus {
+  top: 0;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.u_skip span {
+  display: inline-block;
+  padding: 2px 6px 0 0;
+  font-size: 13px;
+  line-height: 26px;
+  letter-spacing: -1px;
+  color: #fff;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.api_ly .api_thum, .api_ly .ly_clse, .api_ly .btn_give span {
+  background-image: url(https://ssl.pstatic.net/happyimg2/img/pc/sp_hb_legacy_14de6717.png);
+  background-size: 144px 114px;
+}
+
+.api_ly {
+  overflow: hidden;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 100;
+  width: 270px;
+  padding: 20px 20px 20px 66px;
+  font-family: "돋움", Dotum, "맑은고딕", "malgun gothic", "Apple SD Gothic Neo", Helvetica, sans-serif;
+  box-sizing: content-box;
+}
+
+.api_ly * {
+  box-sizing: content-box;
+}
+
+.api_ly .api_thum {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  width: 26px;
+  height: 28px;
+  margin-top: -14px;
+  background-position: 0px -66px;
+}
+
+.api_ly_bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #30323b;
+  opacity: 0.98;
+  filter: alpha(opacity=98);
+}
+
+.api_ly p {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 19px;
+  letter-spacing: -0.05em;
+  text-align: left;
+  color: #fff;
+}
+
+.api_ly p em {
+  color: #89b51b;
+}
+
+.api_ly p em em {
+  font-family: arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  vertical-align: -1px;
+}
+
+.api_ly p .txt_green {
+  color: #89b524;
+}
+
+.api_ly p small {
+  margin-left: 3px;
+  font-size: 12px;
+  color: #939393;
+}
+
+.api_ly .my_money {
+  display: inline-block;
+  width: 155px;
+  margin-top: 10px;
+  font-size: 12px;
+  letter-spacing: -0.05em;
+  color: #aaa;
+}
+
+.api_ly .my_money a {
+  font-family: arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: normal;
+  letter-spacing: 0;
+  text-decoration: underline;
+  vertical-align: -1px;
+  color: #89b51b;
+}
+
+.api_ly .ly_clse {
+  color: transparent;
+  white-space: nowrap;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 12px;
+  height: 12px;
+  background-position: -90px -66px;
+}
+
+.api_ly .btn_give {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.05em;
+  text-decoration: underline;
+  color: #6fa10f;
+}
+
+.api_ly .btn_give span {
+  display: inline-block;
+  width: 3px;
+  height: 5px;
+  margin: 0 0 0 1px;
+  background-position: -75px -34px;
+  vertical-align: 1px;
+}
+
+.ly_personal .notice:before, .ly_personal .btn_pop_clse {
+  background-image: url(https://ssl.pstatic.net/happyimg2/img/pc/sp_hb_legacy_14de6717.png);
+  background-size: 144px 114px;
+}
+
+.dim {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #000;
+  opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+}
+
+.ly_personal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 110;
+  width: 400px;
+  height: 480px;
+  margin: -195px 0 0 -200px;
+  padding: 34px 30px 0;
+  border: solid 1px #ccc;
+  background-color: #fff;
+  text-align: center;
+}
+
+.ly_personal .tit {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+  color: #000;
+}
+
+.ly_personal .tit .point {
+  font-weight: normal;
+  color: #00ab33;
+}
+
+.ly_personal .cont {
+  margin: 27px 0 0;
+  padding: 27px 0 29px;
+  border: solid #e5e5e5;
+  border-width: 1px 0;
+}
+
+.ly_personal .cont .txt {
+  font-size: 17px;
+  line-height: 23px;
+  color: #676767;
+}
+
+.ly_personal .cont .txt .point {
+  font-weight: normal;
+  color: #000;
+}
+
+.ly_personal .cont .btn_green {
+  display: block;
+  width: 256px;
+  height: 63px;
+  margin: 15px auto 0;
+  background-color: #10c838;
+  font-size: 16px;
+  line-height: 63px;
+  color: #fff;
+}
+
+.ly_personal .cont .txt_link {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 11px;
+  text-decoration: underline;
+  color: #888;
+}
+
+.ly_personal .notice {
+  margin-top: 27px;
+  font-size: 11px;
+  line-height: 16px;
+  color: #999898;
+}
+
+.ly_personal .notice:before {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin: 0 5px 2px;
+  background-position: -106px -66px;
+  vertical-align: middle;
+  content: "";
+}
+
+.ly_personal .inp_chk {
+  margin-top: 22px;
+}
+
+.ly_personal .inp_chk input {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: auto;
+  vertical-align: middle;
+  clip: auto;
+  appearance: checkbox;
+}
+
+.ly_personal .inp_chk label {
+  font-size: 12px;
+  vertical-align: middle;
+  color: #929292;
+  cursor: pointer;
+}
+
+.ly_personal .btn_pop_clse {
+  color: transparent;
+  white-space: nowrap;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 15px;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  background-position: -30px -66px;
+}

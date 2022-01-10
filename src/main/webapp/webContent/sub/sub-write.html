@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>subpage</title>
+<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="sub.css" />
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> <!--CDN 링크 -->
+<!-- 임시 서브 헤더-->
+<link href="../css/subb.css" rel="stylesheet"> <!--서브 header css-->
+<link href="../css/subba.css" rel="stylesheet"> <!--서브 header css-->
+
+<link href="../css/global.css" rel="stylesheet"> <!--배너 css-->
+<link href="../css/partner.css" rel="stylesheet"> <!--파트너 css-->
+
+<!-- slick css -->
+<link rel="stylesheet" type="text/css" href="../css/slick-1.8.1/slick/slick.css"/> 
+<link rel="stylesheet" type="text/css" href="../css/slick-1.8.1/slick/slick.min.js"/> 
+<script type="text/javascript" src="../css/slick-1.8.1/slick/slick.min.js"></script>
+</head>
+<div class="tab-3" data-swipe='{"type":"case1","start":".active"}'>
+			<ul>
+				<li data-act='tab' class="item"><a href="#"><span class="in">기부</span></a></li>
+				<li data-act='tab' class="item active"><a href="#"><span class="in">봉사</span></a></li>
+				<li data-act='tab' class="item"><a href="#"><span class="in">지역뉴스</span></a></li>
+				<li data-act='tab' class="item"><a href="#"><span class="in">후원</span></a></li>
+			</ul>
+		</div>
+
+
+<div class="sub-write">
+			
+			<form name="news" enctype="multipart/form-data">
+					<h2 class="title2"> 기부에 필요한 정보를 기입해주세요</h2>
+				
+					<fieldset>
+						
+						
+						<table class="table">
+							<caption><p style="font-size:30px; margin-bottom:20px;">도움이 필요한 이에게 도움의 손길을...</p></caption>
+							<colgroup>
+								<col width="20%">
+								<col width="20%">
+								<col width="*">
+							</colgroup>
+							
+							<tr>
+								<th><label for="title">제목</label></th>
+								<td colspan="2"><input type="text" maxlength='100' name="t_title" id="title" class="title" placeholder="제목을 입력해주세요" style="border:1px solid #333333"></td>
+							</tr>
+							<tr>
+								<th><label for="title">기부명</label></th>
+								<td colspan="2"><input type="text" maxlength='100' name="t_sname" id="title" class="title" placeholder="기부 제목을 입력해주세요" style="border:1px solid #333333"></td>
+							</tr>
+							<tr>
+								<th><label for="title">기부 목표 금액</label></th>
+								<td colspan="2"><input type="number" maxlength='100' name="t_taget" id="title" class="title" placeholder="목표 금액을 입력해주세요" style="border:1px solid #333333"></td>
+							</tr>
+							<tr>
+								<th><label for="title">기부하는 장소</label></th>
+								<td colspan="2"><input type="text" maxlength='100' name="t_address"  id="title" class="title"  placeholder="기부처를 입력해주세요" style="border:1px solid #333333"></td>
+							</tr>
+							<tr>
+								<th><label for="cont">기부 내용</label></th>
+								<td colspan="2"><textarea type="cont" name="t_content"  id="cont" class="cont" placeholder="기부 내용을 입력해주세요" style="border:1px solid #333333"></textarea>
+							</tr>
+							<tr>
+								<th><label for="cont">기부 종료 날짜</label></th>
+								<td colspan="2"><input type="date" name="t_enddate" id="title" class="title" style="border:1px solid #333333"></textarea>
+							</tr>
+
+	<style>
+	#preview-image{display:none;}
+	
+	height:300px;
+	</style>
+					
+							<tr>
+								
+								<th><label for="file">메인사진 첨부</label></th>
+								<td><img style="width: 500px;" id="preview-image"> </td>
+								<td><input type="file" name="t_attach" class="file" id="file" style="border:1px solid #333333"></label></td>
+							</tr>
+							
+							<tr>
+								<td colspan="3">
+								
+								
+								</td>
+							</tr>
+
+							</table>
+					</fieldset>
+				</form>
+								<input type="button" onclick="goSave()" value="등 록" class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
+								<input type="button" onclick="location.href=''" value="목 록"class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
+			</div>

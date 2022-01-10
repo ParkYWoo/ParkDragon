@@ -1,0 +1,810 @@
+@charset "utf-8";
+
+
+
+
+/*후원금 사용 공개 내역-----------------------------------------------------*/
+.mid-money-clean-box{
+    z-index: 320;
+    width: 1140px;
+    margin: 30px auto 0;
+    clear: both;
+}
+.mid-money-clean-title{
+    border-width: 0px;
+    border-style: solid;
+    border-color: transparent;
+    text-align: center;
+}
+.mid-money-clean-title h3 {
+    font-size: 28px;
+    font-family: '__NanumGothicBold_5';
+    font-weight: 600;
+    color: #333;
+    letter-spacing: -1.5px;
+    text-align: center;
+}
+.mid-money-title-line{
+    width: 120px;
+    height: 3px;
+    background-color: #333;
+    position: relative;
+    margin: 30px auto 50px;
+}
+/*왼쪽 상자*/
+.mid-money-l-content-box{
+    width: 50%;
+    max-width: 700px;
+    float: left;
+}
+.mid-money-l-content-box ul{
+    width: 95%;
+    margin: 0 auto;
+    max-width: 960px;
+}
+.mid-money-l-content-box li{
+    float: left;
+    width: 33%;
+    padding: 0 2%;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #666;
+    text-align: center;
+    list-style: none;
+}
+.mid-money-l-content-box li img {
+    display: block;
+    margin: 0 auto 15px;
+    width: 100%;
+    max-width: 148px;
+    border: 0px;
+    border-style: solid;
+    transform-origin: left top;
+}
+/*오른쪽 상자*/
+.mid-money-r-content-box{
+    margin-top: 10px;
+    float: left;
+    width: 50%;
+    margin-bottom: 20px;
+}
+.mid-money-r-content-box p {
+    margin-left: 8.34%;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+    font-family: '__NanumGothicBold_5';
+    font-weight: 600;
+}
+.mid-r-content-btn{
+    margin-left: 8.34%;
+    margin-top: 44px;
+}
+.mid-r-content-btn .r-btn {
+    display: block;
+    width: 90%;
+    max-width: 400px;
+    text-align: left;
+
+    margin-bottom: 5px;
+    padding: 1px 20px;
+    -webkit-transition-duration: .2s;
+    -webkit-transition-delay: 0;
+    -webkit-transition-timing-function: ease;
+    transition-duration: .2s;
+    transition-delay: 0;
+    transition-timing-function: ease;
+    border-width: 0;
+    border-color: transparent;
+    background: #f60 no-repeat 24px 50%;
+    border-radius: 2px;
+    color: #fff;
+    line-height: 38px;
+    font-size: 16px;
+    text-align: center;
+    font-family: '__NanumGothicBold_5';
+    font-weight: 600;
+}
+/*임시 보류 파일*/
+.mid-money-box{
+    width: 1140px;
+    margin: 55px auto 0;
+    background-color: antiquewhite;
+    
+}
+
+/*기부 박스----------------------------------------------------------------*/
+.donation-box{
+    margin: auto 0;
+    width: 1140px;
+	
+}
+.donation-text-box{
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+/* 기부 박스 큰제목*/
+.donation-text{
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    color: inherit;
+}
+/*기부 박스 내용*/
+.donation-img-list{
+    overflow: hidden;
+    margin-top: 20px;
+    font-size: 0px; /*폰트에 따라서 display:inline-block 요소를 사용했을 때 공백이 생길 수 있다. 공백 제거법으로 상위클래스의 폰트크기를 없앤다.*/
+}
+.donation-img-list li {
+    margin-left:24px;
+}
+.donation-img-list li:first-child {
+    margin-left:0px;
+}
+.donation-img-list li:nth-child(4n){
+    margin-right:0px;
+}
+.donation-img-list li:nth-child(4n+1){
+    margin-left:0px;
+}
+
+.donation-card-list{
+    display: inline-block;
+    vertical-align: top;
+	padding-top:22px;
+}
+.donation-card-a{
+    float: left;
+    position: relative;
+    width: 267px;
+    height: 363px;
+    border: 1px solid rgba(0,0,0,.11);
+    background-color: #fff;
+/* 폰트 보류    font-family: NanumSquareWebFont,dotum,Sans-serif; */
+}
+.donation-card-a::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+}
+.donation-card-a:hover {border-color: rgba(202, 33, 33, 0.33);} /*마우스를 올리면 테두리 색이 변경됨 / border: 1px solid red; 이런식으로 주면 테두가 추가되서 입체적 느낌을 줄 수 있다.*/
+
+.donation-card-pic{
+    width: 265px;
+    height: 200px;
+    background-color: #ccc;
+}
+.donation-card-content-box{
+    padding: 21px 20px 0;
+	
+}
+.donation-card-content-title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    display: -webkit-box;
+    height: 50px;
+    line-height: 25px;
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 17px;
+    letter-spacing: -.5px;
+    color: #333;
+}
+.donation-comp{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 8px;
+    font-family: NanumBarunGothic,dotum,Sans-serif;
+    font-size: 15px;
+    color: #828282;
+}
+.donation-parameter-bar{
+    height: 5px;
+    margin-top: 13px;
+    background-color: #e8e8e8;
+}
+.donation-parameter-green{
+    display: inline-block;
+    height: 100%;
+    background-color: #10c838;
+    text-align: right;
+    vertical-align: top;
+}
+.donation-parameter-orange{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    background-color: #f69c00;
+    vertical-align: top;
+}
+.donation-parameter-num{
+    display: inline-block;
+    margin-top: 11px;
+    font-size: 17px;
+    letter-spacing: -.2px;
+    color: #00ab33;
+}
+.donation-parameter-money{
+    float: right;
+    margin-top: 11px;
+    font-size: 17px;
+    color: #333;
+}
+
+/*재능 기부-------------------------------------------------------------------------*/
+.ability-box{
+    margin: 70px auto 0;
+    width: 1140px;
+}
+.ability-box::after{
+    display: table;
+    table-layout: fixed;
+    clear: both;
+    content: "";
+}
+.ability-content-a{
+    float: left;
+    position: relative;
+    width: 364px;
+    height: 356px;
+    margin: 20px 24px 0 0;
+}
+.ability-box .ability-content-a:last-child{ /*ability-box의 마지막 박스에 magin을 주지않아 꽉 채운다.*/
+    margin:20px 0 0 0;
+}
+.ability-content-a::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid rgba(0,0,0,.11);
+    content: "";
+}
+.ability-content-pic{
+    width: 364px;
+    height: 242px;
+    background-color: #ccc;
+}
+.ability-content-text-box{
+    position: relative;
+    padding: 18px 100px 20px 20px;
+}
+.ability-content-compy{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 15px;
+    color: #828282;
+}
+.ability-content-text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    display: -webkit-box;
+    height: 50px;
+    line-height: 25px;
+    word-wrap: break-word;
+    word-break: keep-all;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-top: 6px;
+    font-size: 17px;
+    letter-spacing: -.5px;
+    color: #333;
+}
+.ability-content-small-img{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -33px;
+    border-radius: 50%;
+}
+.ability-content-gage{
+    position: absolute;
+    top: 50%;
+    height: 60px;
+    margin-top: -30px;
+    right: 20px;
+    width: 60px;
+    border: 1px solid #0f92e0;
+    border-radius: 50%;
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-size: 18px;
+    line-height: 60px;
+    letter-spacing: -.2px;
+    text-align: center;
+    color: #0f92e0;
+}
+/*기부 금액 현황-----------------------------------------------------*/
+.uses-today-box{
+    margin-top: 70px;
+    background-color: rgb(236, 193, 193);
+}
+.uses-today-sec-box{
+    position: relative;
+    width: 1140px;
+    margin: 0 auto;
+    padding: 45px 0;
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    line-height: 1.2;
+}
+.donation-today-h3{
+    display: inline-block;
+    padding: 6px 10px 4px;
+    border-radius: 15px;
+    background-color: #d88a87;
+    font-size: 17px;
+    color: hsla(0,0%,100%,.85);
+    vertical-align: top;
+}
+.donation-today-msg{
+    display: block;
+    margin-top: 24px;
+    font-size: 24px;
+    color: #fff;
+}
+.donation-today-text-box{
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 650px;
+    text-align: right;
+}
+.donation-today-text-small-box{
+    display: inline-block;
+    margin-bottom: 15px;
+    vertical-align: top;
+}
+.donation-today-text-small-box:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+/*오늘의 후원 금액 표시 글자 및 숫자*/
+.donation-t-msg-box{
+    float: left;
+    margin-right: 20px;
+    margin-left: 38px;
+}
+.donation-t-num-box{
+    overflow: hidden;
+}
+.donation-t-msg-box, .donation-t-num-box { /*2가지 클래스에 속성을 준다.*/
+    font-size: 18px;
+    line-height: 36px;
+    color: #9b7373;
+    font-weight: bolder;
+}
+.donation-today-text-small-box:nth-child(odd) .donation-t-num-box {
+    width: 130px;
+}
+.donation-today-text-small-box:nth-child(2n) .donation-t-num-box {
+    width: 220px;
+}
+.donation-t-money{
+    display: inline-block;
+    font-size: 33px;
+    font-weight: 700;
+    color: #af6e6e;
+    vertical-align: top;
+}
+/*함께하는 파트너----------------------------------------------------------------*/
+.partnerlogo-box{
+    position: relative;
+    overflow: hidden;
+    width: 1140px;
+    margin: 0 auto -96px;
+    padding: 40px 0 80px;
+}
+.partnerlogo-box:after, .partnerLogo-box:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    content: "";
+}
+.partnerlogo-box:before { /*로고 이미지 움직임*/
+    left: 0;
+    width: 238px;
+    background-image: linear-gradient(270deg,hsla(0,0%,100%,0),#fff 59%,#fff 0);
+}
+.partnerlogo-box:after { /*로고 이미지 움직임*/
+    right: 0;
+    width: 110px;
+    background-image: linear-gradient(90deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.5) 47%,#fff 95%);
+}
+.partnerlogo-title{
+    float: left;
+    position: relative;
+    z-index: 1;
+    margin-top: 15px;
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 34px;
+    letter-spacing: -.5px;
+}
+.partnerlogo-link{
+    display: inline-block;
+    vertical-align: top;
+}
+.partnerlogo-list{
+    -webkit-animation: partnerlogo-list-img 60s linear infinite;
+    animation: partnerlogo-list-img 60s linear infinite;
+
+    -webkit-animation: 4s linear 0s infinite alternate move_eye;
+    animation: 4s linear 0s infinite alternate move_eye; /*0초는 시작 딜레이 = 0초면 바로 시작*/
+    white-space: nowrap;
+}
+/*-----------------------이미지 움직이기 작업--------------------------*/
+@-webkit-keyframes move_eye { 
+    from { margin-left: -20%; 
+    } to { 
+        margin-left: 100%; 
+    }  
+}
+@keyframes move_eye {
+    from { margin-left: -20%; 
+    } to { 
+        margin-left: 100%; 
+    }  
+}
+
+@keyframes slidein {
+    from {
+    margin-left: 100%;
+    width: 300%
+    }
+
+    to {
+        margin-left: 0%; 
+        width: 100%;
+    }
+}
+/*------------------------------------------------------------------*/
+.partnerlogo-list-img{
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    padding: 6px;
+    background-color: #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-origin: content-box;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: top;
+    background-image: url(../img/heart.png);
+}
+.partnerlogo-list-img::before{
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    margin-left: -1px;
+    vertical-align: middle;
+    content: "";
+}
+.partnerlogo-list-img::after{
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+border-radius: 50%;
+border: 1px solid rgba(0,0,0,.06);
+content: "";
+}
+.partnerlogo-list {
+    animation-duration: 3s;
+    animation-name: slidein;
+    
+}
+/*footer------------------------------------------------------------------------*/
+.footer-box{
+    position: relative;
+    z-index: 10;
+    margin-top: 96px;
+    padding-top: 52px;
+    border-top: 1px solid #e0e0e0;
+    background-clip: content-box;
+    background-color: #666666;
+    overflow: hidden;
+}
+.footer-box:before {
+    position: absolute;
+    top: 51px;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: #e3e3e3;
+    content: "";
+}
+.footer-top{
+    position: relative;
+    width: 1140px;
+    margin: -52px auto 0;
+    padding: 16px 0 15px;
+}
+.footer-top-box{
+    position: absolute;
+    top: 16px;
+    left: 0;
+    font-size: 15px;
+}
+.footer-top-box:after {
+    display: table;
+    table-layout: fixed;
+    clear: both;
+    content: "";
+}
+.footer-top-notice{
+    float: left;
+    width: 124px;
+    margin-right: 10px;
+    font-weight: 700;
+}
+.foorer-top-notice-text{
+    float: left;
+    color: #828282;
+}
+.icon-n{
+    display: inline-block;
+    width: 9px;
+    height: 11px;
+    margin-left: 7px;
+    color: #21ce55;
+}
+.service-info-box{
+    margin: 39px 0 18px;
+}
+.service-info-first-line{
+    position: relative;
+    padding: 0 94px 0 134px;
+    font-size: 0;
+    line-height: 0;
+}
+.service-info-first-line-title{
+    position: absolute;
+    top: 12px;
+    left: 0;
+    font-size: 14px;
+    line-height: 1.36;
+    font-weight: 700;
+	 color: #ffffff;
+}
+.service-info-first-line-item{
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.36;
+    color: #c0c0c0;
+}
+.service-info-first-line-item a:hover{
+    
+    color: #fff;
+}
+.service-info-first-line-item+.service-info-first-line-item::before{ /*first 차일드 개념인거같음*/
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    margin: 2px 12px 0 11px;
+    background-color: #e3e3e3;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;
+    content: "";
+}
+.footer-info-box{
+    position: relative;
+    padding: 26px 0 42px;
+    border-top: 1px solid #f0f0f0;
+    background-color: #fff;
+    font-size: 14px;
+    color: #828282;
+}
+.footer-info-inner{
+    width: 1140px;
+    margin: 0 auto;
+}
+.footer-info-list{
+    margin-top: 18px;
+}
+ul{
+    list-style: none;
+}
+.footer-info-item{
+    float: left;
+}
+.footer-info-item+.footer-info-item:before { /*첫번째 글 다음부터 | 으로 칸막이 부여*/
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    margin: 0 10px;
+    background-color: #d7d7d7;
+    vertical-align: -1px;
+    content: "";
+}
+.footer-info-address{
+    margin-top: 5px;
+    font-style: normal;
+}
+.footer-info_notice{
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+}
+.footer-info-logo{
+    margin-right: 7px;
+}
+.company-logo {
+    width: 220px;
+    position: absolute;
+    object-position: -25px -65px;
+    -webkit-filter: opacity(.5) drop-shadow(0 0 0 gray);
+    filter: opacity(.5) drop-shadow(0 0 0 gray);
+}
+.Copyright {
+    margin-left: 170px;
+    padding-bottom: 20px;
+}
+
+
+
+/* 서브 css 위는 베이스와 같다.-----------------------------------------------------------------------------*/
+.sub-main {
+	margin: -52px auto 0;
+	padding-top:75px;
+	width:1140px;
+	
+	/*background-color:#c0c0c0;*/
+
+}
+.sub-menu {
+	width:1140px;
+	height:100px;
+	/*background-color:#617161;*/
+	
+}
+.sub-menu ul {
+	width: 95%;
+    margin: 0 auto;
+    max-width: 960px;
+	background-color:#fff;
+}
+.sub-menu li {
+	float: left;
+    width: 20%;
+    padding: 0 2%;
+    font-size: 30px;
+    line-height: 1.4;
+    color: #fff;
+    text-align: center;
+    list-style: none;
+	
+	background-color:#fdc446;
+}
+
+.sub-search {
+	width:1140px;
+	
+	/*background-color:#777777;*/
+
+}
+
+.sub-search ul {
+	width: 95%;
+    margin: 0 auto;
+    max-width: 960px;
+	
+}
+.sub-search li {
+	float: left;
+    width: 18%;
+    
+	margin-right: 17px;
+    font-size: 25px;
+    line-height: 1.4;
+    color: #fff;
+    text-align: center;
+    list-style: none;
+	border-radius: 25px;
+	background-color:#ff6781;
+	text-shadow: 2px 2px 2px #ff3399;
+		
+}
+.sub-search li:hover{
+	
+    color: #ff6781;
+    text-align: center;
+    list-style: none;
+	border-radius: 25px;
+	background-color:#ffdfe8;
+	text-shadow: 2px 2px 2px #fff;
+		
+}
+.sub-search li a:hover{
+	
+    color: #ff6781;
+    text-align: center;
+    list-style: none;
+	border-radius: 25px;
+	background-color:#ffdfe8;
+	text-shadow: 2px 2px 2px #fff;
+		
+}
+
+.sub-content {
+	width: 100%;
+	
+    overflow: hidden;
+   /* padding: 20px 0;*/
+	/*background-color:#399393;*/
+	
+}
+.main-story {
+	background: no-repeat center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 333;
+    background-size: cover;
+    opacity: 0;
+    transition: all 0.5s;
+	font-size: 20px;
+}
+
+/* sub-write css*/
+.sub-write {width:1140px; padding:20px 20px 130px 20px; margin:0 auto;  }
+.table {border:1px solid #e1e1e1; width:97%; margin:0 auto; background:#fff; }
+.table .title {width:95%; height:40px; padding:10px; margin:10px; border:none; font-family: 'Dongle'; font-size:15px;}
+.table .cont {width:95%; height:200px; padding:10px; margin:10px; border:none; font-family: 'Dongle'; font-size:15px; background-color:#fff;}
+.table th {background:#f0f0f0; border:NONE; } 
+.table td {border:none; }
+.table .file {width:95%; height:40px; margin:10px; border:none; font-size:12px; font-family: 'Dongle';   background-color:#fff;}
+input.btn {float:right;width:95px; height:40px; border:1px solid #dcddc; background:0 none; border-radius: 25px; cursor:pointer; margin:10px;}
+.title {width:95%; height:40px; padding:10px; margin:10px; border:none; font-family: 'Dongle'; font-size:15px; background-color:#fff;}
+.title2 {margin-bottom:20px; text-align:center;width:95%; height:80px; padding:10px; margin:10px; border:none; font-family: 'galmat'; font-size:45px; background-color:#f0f0f0; color:#333333;}
+.tser{margin-left:20px;height:25px;}
+
+/* cont css */
+.cont {width:100%; margin:0 auto; overflow:hidden; padding:70px 20px 150px 20px;}
+/*.cont .img {float:left; width:500px; height:500px; display:inline-block;}*/
+.cont h3 {font-size:22px; color:#444444; font-weight:bold; padding-bottom:50px;}
+.cont h3 span{font-size:12px; color:#999; letter-spacing:1px; }
+.cont .txt {width:650px; height:290px; float:left; font-size:14px; display:inline-block; color:#777; padding:10px 10px; line-height:32px; border: none;resize: none;}
+.con1{width:760px; float:left; height:2000px;background-color:#399393;}
+.con2{width:340px; float:right; position:pixed; background-color:#999999;}
+/*눈내리는 효과------------------------------------------------------------------------*/
+.section01{position:relative; height:500px; background-color:#fff; }
+.section01 canvas { display: block; position: absolute; top: 0; left:50%; margin-left:-500px; width:1000px; height:500px; z-index: 1; pointer-events: none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

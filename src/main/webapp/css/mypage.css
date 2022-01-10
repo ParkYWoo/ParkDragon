@@ -1,0 +1,476 @@
+/* 마이페이지-메뉴로 새로 css를 만듬------------------------------------------------------------
+.my-page-box {
+    width: 1140px;
+    margin: 50px auto 0;
+}
+.my-page-box:after {
+    display: table;
+    table-layout: fixed;
+    clear: both;
+    content: '';
+}
+.my-list-left{
+    float: left;
+    width: 216px;
+}
+/프로필 정보/
+.my-profile{
+    padding: 29px 10px 27px;
+    border: 1px solid #777d83;
+    background-color: #848b91;
+    text-align: center;
+    color: #fff;
+}
+/프로필 내용/
+.my-profile-img {
+    border-radius: 50%;
+    vertical-align: top;
+}
+.my_profile_nickname {
+    margin-top: 10px;
+    font-size: 15px;
+}
+.my_profile_nickname .ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 162px;
+    vertical-align: middle;
+}
+.my_profile_nickname:after { /닉네임 뒤에 "님" 글자/
+    content: '\B2D8';
+}
+.my_profile_id {
+    margin-top: 2px;
+    font-size: 13px;
+}
+/프로필 메뉴/
+.my_lnb {
+    padding: 48px 34px 44px 32px;
+    border: 1px solid #dcdcdc;
+    border-top: 0;
+    background-color: #fafafa;
+}
+
+.my_lnb_item {
+    display: block;
+    position: relative;
+    margin-top: 49px;
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-size: 17px;
+}
+.my_lnb_item:first-child {
+    margin-top: 0;
+}
+.my_lnb_item[aria-current=true] {
+    font-weight: 700;
+    color: #00ab33;
+}
+.my_content {
+    float: right;
+    width: 884px;
+}
+.my_summary_wrap {
+    display: table;
+    table-layout: fixed;
+    position: relative;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 13px;
+}
+.my_summary_box {
+    display: table-cell;
+    padding: 38px 33px 37px 38px;
+    vertical-align: top;
+}
+.my_summary_box+.my_summary_box {
+    padding: 38px 38px 37px 33px;
+}
+.my_summary_box:before {
+    position: absolute;
+    top: 21px;
+    bottom: 21px;
+    left: 50%;
+    width: 1px;
+    background-color: rgba(0,0,0,.06);
+    content: '';
+}
+.my_summary_title {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 31px;
+}
+.my_summary_title .title {
+    float: left;
+    margin-top: 8px;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.27;
+}
+
+.my_summary_title .number_wrap {
+    float: right;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 41px;
+    color: #00ab33;
+}
+.my_summary_title .number {
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-size: 37px;
+    font-weight: 400;
+    letter-spacing: -.5px;
+    vertical-align: top;
+}
+.my_summary_title:after {
+    display: table;
+    table-layout: fixed;
+    clear: both;
+    content: '';
+}
+.my_summary_item {
+    display: block;
+    margin-top: 16px;
+}
+.my_summary_title+.my_summary_item {
+    margin-top: 20px;
+}
+.my_summary_item .title {
+    display: inline-block;
+    position: relative;
+    margin-top: 4px;
+    padding-right: 12px;
+    font-size: 15px;
+    line-height: 1.26;
+}
+.my_summary_item .number_wrap {
+    float: right;
+    font-size: 16px;
+    line-height: 24px;
+}
+.my_summary_item .number {
+    display: inline-block;
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-size: 20px;
+    letter-spacing: -.5px;
+    vertical-align: top;
+    font-weight: bold;
+}
+.my_summary_item:after {
+    display: table;
+    table-layout: fixed;
+    clear: both;
+    content: '';
+}
+*/
+/*내 소식-------------------------------------------------------------------------*/
+.my_recent_news_wrap {
+    position: relative;
+    margin-top: 46px;
+}
+.my_recent_news_title {
+    display: inline-block;
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-size: 22px;
+    line-height: 27px;
+    color: #202020;
+    vertical-align: middle;
+}
+.my_recent_news_count {
+    display: inline-block;
+    margin: 1px 0 0 10px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+.my_recent_news_count .number {
+    display: inline-block;
+    margin-left: 4px;
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-size: 17px;
+    color: #00ab33;
+    vertical-align: bottom;
+}
+.my_recent_news_guide {
+    display: inline-block;
+    margin-top: 1px;
+    font-size: 14px;
+    color: #828282;
+    vertical-align: middle;
+}
+.my_recent_news_guide::before {
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    margin: 2px 5px 0 4px;
+    background-color: rgba(0,0,0,.15);
+    vertical-align: top;
+    content: '';
+}
+.my_recent_news_feed {
+    padding: 0 20px 0 33px;
+    margin-top: 14px;
+    border: 1px solid #e0e0e0;
+    border-width: 1px 0;
+}
+.list_news {
+    position: relative;
+}
+.my_recent_news_feed .list_news {
+    padding: 28px 0 35px;
+}
+.list_news::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    background-color: rgba(0,0,0,.08);
+    border-right: 1px solid rgba(0,0,0,.03);
+    content: '';
+}
+.list_news .item_news {
+    position: relative;
+    padding-left: 27px;
+}
+.list_news .item_news::before {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    content: '';
+}
+/*각 기부에 따라 색상 변경*/
+.list_news .item_news.type_funding::before {
+    background-color: #0f92e0;
+}
+.list_news .card_news {
+    position: relative;
+    padding: 20px 105px 14px 19px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,.1);
+    font-size: 0;
+}
+.list_news .link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.list_news .text_content {
+    margin-bottom: 7px;
+    font-size: 15px;
+    line-height: 22px;
+    color: #202020;
+}
+.list_news .text_information {
+    font-size: 15px;
+    color: #666;
+    letter-spacing: -.3px;
+}
+.list_news .text_information {
+    font-size: 15px;
+    color: #666;
+    letter-spacing: -.3px;
+}
+.list_news .text_information+.text_information::before {
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    margin: 2px 9px 0;
+    background-color: #d8d8d8;
+    vertical-align: top;
+    content: '';
+}
+.list_news .button_delete {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+}
+.list_news .button_delete:after, .list_news .button_delete:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 1px;
+    background-color: rgba(0,0,0,.3);
+}
+.list_news .button_delete:before {
+    -webkit-transform: translate(-50%,-50%) rotate(
+45deg);
+    -ms-transform: translate(-50%,-50%) rotate(45deg);
+    transform: translate(-50%,-50%) rotate(
+45deg);
+}
+.list_news .button_delete:after {
+    -webkit-transform: translate(-50%,-50%) rotate(
+135deg);
+    -ms-transform: translate(-50%,-50%) rotate(135deg);
+    transform: translate(-50%,-50%) rotate(
+135deg);
+}
+.my_recent_news_link {
+    position: absolute;
+    top: -7px;
+    right: -10px;
+    padding: 12px;
+    font-size: 14px;
+    color: #202020;
+}
+i.fas.fa-chevron-right {
+    font-size: 12px;
+    color: #a2a2a2;
+}
+
+/*활동 내역*/
+.my_recent_activity_wrap {
+    margin-top: 50px;
+}
+.my_activity_month {
+    position: relative;
+    margin: -3px 0;
+    background-color: #fff;
+    line-height: 24px;
+    text-align: center;
+}
+.my_activity_month:before {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    content: '';
+}
+.my_activity_month .number {
+    position: relative;
+    padding: 0 16px;
+    background-color: #fff;
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    vertical-align: top;
+}
+.my_activity_list {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.my_activity_cong, .my_activity_deposit, .my_activity_donation, .my_activity_funding, .my_activity_payment, .my_activity_regular, .my_activity_tax {
+    border-top: 1px solid #f0f0f0;
+}
+
+.my_activity_cong:first-child, .my_activity_deposit:first-child, .my_activity_donation:first-child, .my_activity_funding:first-child, .my_activity_payment:first-child, .my_activity_tax:first-child {
+    border-top: 0;
+}
+
+.my_activity_inner {
+    display: table;
+    table-layout: fixed;
+    position: relative;
+    width: 100%;
+    height: 170px;
+}
+.my_activity_left {
+    display: table-cell;
+    width: 92px;
+    vertical-align: middle;
+}
+.my_activity_cong_cancelled { /*금액 사용 시*/
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    padding: 17px 18px;
+    border: 1px solid #bfbfbf;
+    border-radius: 50%;
+}
+.my_activity_cong_cancelled:before {
+    background-image: url(../img/coin.png);
+    filter: invert(85%) sepia(12%) saturate(18%) hue-rotate(345deg) brightness(91%) contrast(85%);
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 34px;
+    height: 36px;
+    display: inline-block;
+    content: '';
+}
+.my_activity_cong_success { /*금액 충전 시*/
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    padding: 17px 18px;
+    border: 1px solid #10c838;
+    border-radius: 50%;
+}
+.my_activity_cong_success:before {
+    background-image: url(../img/coin.png);
+    filter: invert(50%) sepia(98%) saturate(728%) hue-rotate(88deg) brightness(97%) contrast(90%);
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 34px;
+    height: 36px;
+    display: inline-block;
+    content: '';
+}
+.my_activity_center {
+    display: table-cell;
+    line-height: 19px;
+    vertical-align: middle;
+}
+.my_activity_date {
+    display: inline-block;
+    font-weight: 400;
+    color: #828282;
+}
+.my_activity_text2 {
+    display: block;
+    font-size: 16px;
+}
+.my_activity_date+.my_activity_text2, .my_activity_date+.my_activity_title {
+    margin-top: 6px;
+}
+.my_activity_title {
+    display: block;
+    font-size: 16px;
+}
+.my_activity_text2+.my_activity_title {
+    margin-top: 6px;
+    font-size: 15px;
+}
+.my_activity_right {
+    display: table-cell;
+    width: 180px;
+    text-align: right;
+    vertical-align: middle;
+}
+.my_activity_price {
+    display: inline-block;
+    padding-right: 32px;
+    font-size: 15px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+.my_activity_price .number {
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-size: 18px;
+    vertical-align: top;
+}
+.my_activity_link {
+    display: block;
+    margin-top: 30px;
+    border: 1px solid #e5e5e5;
+    background-color: #f6f6f6;
+    font-size: 15px;
+    line-height: 43px;
+    text-align: center;
+}

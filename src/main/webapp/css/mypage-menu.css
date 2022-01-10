@@ -1,0 +1,163 @@
+.my-page-box {
+    width: 1140px;
+    margin: 50px auto 0;
+}
+.my-page-box:after {
+    display: table;
+    table-layout: fixed;
+    clear: both;
+    content: '';
+}
+.my-list-left{
+    float: left;
+    width: 216px;
+}
+/*프로필 정보*/
+.my-profile{
+    padding: 29px 10px 27px;
+    border: 1px solid #777d83;
+    background-color: #848b91;
+    text-align: center;
+    color: #fff;
+}
+/*프로필 내용*/
+.my-profile-img {
+    border-radius: 50%;
+    vertical-align: top;
+}
+.my_profile_nickname {
+    margin-top: 10px;
+    font-size: 15px;
+}
+.my_profile_nickname .ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 162px;
+    vertical-align: middle;
+}
+.my_profile_nickname:after { /*닉네임 뒤에 "님" 글자*/
+    content: '\B2D8';
+}
+.my_profile_id {
+    margin-top: 2px;
+    font-size: 13px;
+}
+/*프로필 메뉴*/
+.my_lnb {
+    padding: 48px 34px 44px 32px;
+    border: 1px solid #dcdcdc;
+    border-top: 0;
+    background-color: #fafafa;
+}
+
+.my_lnb_item {
+    display: block;
+    position: relative;
+    margin-top: 49px;
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-size: 17px;
+}
+.my_lnb_item:first-child {
+    margin-top: 0;
+}
+.my_lnb_item[aria-current=true] {
+    font-weight: 700;
+    color: #00ab33;
+}
+.my_content {
+    float: right;
+    width: 884px;
+}
+.my_summary_wrap {
+    display: table;
+    table-layout: fixed;
+    position: relative;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 13px;
+}
+.my_summary_box {
+    display: table-cell;
+    padding: 38px 33px 37px 38px;
+    vertical-align: top;
+}
+.my_summary_box+.my_summary_box {
+    padding: 38px 38px 37px 33px;
+}
+.my_summary_box:before {
+    position: absolute;
+    top: 21px;
+    bottom: 21px;
+    left: 50%;
+    width: 1px;
+    background-color: rgba(0,0,0,.06);
+    content: '';
+}
+.my_summary_title {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 31px;
+}
+.my_summary_title .title {
+    float: left;
+    margin-top: 8px;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.27;
+}
+
+.my_summary_title .number_wrap {
+    float: right;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 41px;
+    color: #00ab33;
+}
+.my_summary_title .number {
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-size: 37px;
+    font-weight: 400;
+    letter-spacing: -.5px;
+    vertical-align: top;
+}
+.my_summary_title:after {
+    display: table;
+    table-layout: fixed;
+    clear: both;
+    content: '';
+}
+.my_summary_item {
+    display: block;
+    margin-top: 16px;
+}
+.my_summary_title+.my_summary_item {
+    margin-top: 20px;
+}
+.my_summary_item .title {
+    display: inline-block;
+    position: relative;
+    margin-top: 4px;
+    padding-right: 12px;
+    font-size: 15px;
+    line-height: 1.26;
+}
+.my_summary_item .number_wrap {
+    float: right;
+    font-size: 16px;
+    line-height: 24px;
+}
+.my_summary_item .number {
+    display: inline-block;
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-size: 20px;
+    letter-spacing: -.5px;
+    vertical-align: top;
+    font-weight: bold;
+}
+.my_summary_item:after {
+    display: table;
+    table-layout: fixed;
+    clear: both;
+    content: '';
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>homepage</title>
+<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="sub.css" />
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> <!--CDN 링크 -->
+
+<link href="../css/header.css" rel="stylesheet"> <!-- header css-->
+<link href="../css/sub-header.css" rel="stylesheet"> <!--서브 header css-->
+
+<!-- 임시 서브 헤더-->
+<link href="../css/subb.css" rel="stylesheet"> <!--서브 header css-->
+<link href="../css/subba.css" rel="stylesheet"> <!--서브 header css-->
+
+<link href="../css/global.css" rel="stylesheet"> <!--배너 css-->
+<link href="../css/partner.css" rel="stylesheet"> <!--파트너 css-->
+
+<!-- slick css -->
+<link rel="stylesheet" type="text/css" href="../css/slick-1.8.1/slick/slick.css"/> 
+<link rel="stylesheet" type="text/css" href=../"css/slick-1.8.1/slick/slick.min.js"/> 
+<script type="text/javascript" src="../css/slick-1.8.1/slick/slick.min.js"></script>
+
+
+
+</head>
+<body>
+<div id ="containar">
+<div id ="warp" class="warp">    
+    <header id="header" class="header-header-1">
+    <div id ="header-main">
+        <div id ="header-top">
+            <h1 class="logo-box">
+                <a href="" class="logo-img"></a>
+            </h1>
+            <!-- 헤드 메뉴 내용 -->
+            <div class ="main-top-menu">
+                <a class="main-text" href="#">기부</a>
+                <a class="main-text" href="#">봉사</a>
+                <a class="main-text" href="#">재능 기부</a>
+                <a class="main-text" href="./mushnotice.html">지역 뉴스
+                <a class="main-text" href="#">정기 후원</a>
+            </div>
+            <!-- 로그인 및 검색버튼-->    
+                <a class="login" href ="./mushlogin.html">로그인</a>
+                <span class="longbar"></span> <!--로그인 돋보기 사이 | 막대기 -->
+                <a  class="search-img" href =""><i class="fas fa-search" style="font-size: 22px;"></i></a>
+        </div>
+    </div>
+    </header>
+</div>
+
+	<!--서브 헤더 -->
+	<div class="sub-header sub-header-give">
+		<h1 class="sub-title"><span class="text">기 부</span></h1>
+		<span class="deco-set"><i class="deco ty"></i><i class="deco ty-2"></i></span>
+
+		<div class="lnb">
+			<div class="lnb-in">
+				<div class="nav">
+					<li class="home"><a href="/" class="home-in"><span class="ir i-home">홈</span></a></li>
+					<li class="dep" data-dropdown=''><button type="button" data-act='title' data-addtitle="this">큰 메뉴 이름</button>
+						
+					</li>
+					<li class="dep" data-dropdown=''><button type="button" data-act='title' data-addtitle="this">소메뉴</button>
+					
+					</li>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--##### // Visual & LNB #####-->
+<%@ include file = "../common_header.html" %>
+
+<div class="sub-write">
+			
+			<form name="news" enctype="multipart/form-data">
+					<h2 class="title2"> 기부에 필요한 정보를 기입해주세요</h2>
+				
+					<fieldset>
+						
+						
+						<table class="table">
+							<caption><p style="font-size:30px; margin-bottom:20px;">도움이 필요한 이에게 도움의 손길을...</p></caption>
+							<colgroup>
+								<col width="20%">
+								<col width="20%">
+								<col width="*">
+							</colgroup>
+							
+							<tr>
+								<th><label for="title">제목</label></th>
+								<td colspan="2"><input type="text" maxlength='100' name="t_title" id="title" class="title" placeholder="제목을 입력해주세요" style="border:1px solid #333333"></td>
+							</tr>
+							<tr>
+								<th><label for="title">기부명</label></th>
+								<td colspan="2"><input type="text" maxlength='100' name="t_sname" id="title" class="title" placeholder="기부 제목을 입력해주세요" style="border:1px solid #333333"></td>
+							</tr>
+							<tr>
+								<th><label for="title">기부 목표 금액</label></th>
+								<td colspan="2"><input type="number" maxlength='100' name="t_taget" id="title" class="title" placeholder="목표 금액을 입력해주세요" style="border:1px solid #333333"></td>
+							</tr>
+							<tr>
+								<th><label for="title">기부하는 장소</label></th>
+								<td colspan="2"><input type="text" maxlength='100' name="t_address"  id="title" class="title"  placeholder="기부처를 입력해주세요" style="border:1px solid #333333"></td>
+							</tr>
+							<tr>
+								<th><label for="cont">기부 내용</label></th>
+								<td colspan="2"><textarea type="cont" name="t_content"  id="cont" class="cont" placeholder="기부 내용을 입력해주세요" style="border:1px solid #333333"></textarea>
+							</tr>
+							<tr>
+								<th><label for="cont">기부 종료 날짜</label></th>
+								<td colspan="2"><input type="date" name="t_enddate" id="title" class="title" style="border:1px solid #333333"></textarea>
+							</tr>
+
+	<style>
+	#preview-image{display:none;}
+	
+	height:300px;
+	</style>
+	
+	
+												
+							<tr>
+								
+								<th><label for="file">메인사진 첨부</label></th>
+								<td><img style="width: 500px;" id="preview-image"> </td>
+								<td><input type="file" name="t_attach" class="file" id="file" style="border:1px solid #333333"></label></td>
+							</tr>
+							
+							<tr>
+								<td colspan="3">
+								<input type="button" onclick="goSave()" value="등 록" class="btn" style="background-color:#ffe9e2;font-family: 'Dongle';">
+								<input type="button" onclick="location.href=''" value="목 록"class="btn" style="background-color:#ffe9e2;font-family: 'Dongle';">
+								
+								</td>
+							</tr>
+
+							</table>
+					</fieldset>
+				</form>
+			</div>
+			
+			
+
+<%@ include file = "../common_footer.html" %>
+</div>
+</body>
+<!--footer -->
+    <footer class="footer-box">
+        <div class="footer-top">
+            <dl class="footer-top-box">
+                <dt class="footer-top-notice"><a href="">공지사항</a></dt>
+                <dd class="foorer-top-notice-text">
+                    <a href="">회원 가입시 개인정보 관리 내역에 대해 안내해드립니다.<i class="icon-n"><i class="fab fa-envira"></i></i></a>
+                </dd>
+            </dl>
+        <div class="service-info-box" aria-hidden="false">
+            <dl class="service-info-first-line">
+                <dt class="service-info-first-line-title">해피빈 안내</dt>
+                <dd class="service-info-first-line-item"><a href="">해피빈 소개</a></dd>
+                <dd class="service-info-first-line-item"><a href="">콩받기 안내</a></dd>
+                <dd class="service-info-first-line-item"><a href="">해피빈 현황</a></dd>
+                <dd class="service-info-first-line-item"><a href="">콩구폰 입력</a></dd>
+            </dl>
+            <dl class="service-info-first-line">
+                <dt class="service-info-first-line-title">제휴∙단체안내</dt>
+                <dd class="service-info-first-line-item"><a href="">해피로그 가입</a></dd>
+                <dd class="service-info-first-line-item"><a href="">기업제휴 문의</a></dd>
+                <dd class="service-info-first-line-item"><a href="">펀딩 개설 신청</a></dd>
+            </dl>
+        </div>
+        </div>
+    
+        <div class="footer-info-box">
+            <div class="footer-info-inner">
+                <ul class="footer-info-list">
+                    <li class="footer-info-item"><a href="" target="해피빈 이용약관">해피빈 이용약관</a></li>
+                    <li class="footer-info-item"><a href="" target="개인정보처리방침"><strong>개인정보처리방침</strong></a></li>
+                    <li class="footer-info-item"><a href="" target="책임의 한계와 법적고지">책임의 한계와 법적고지</a></li>
+                    <li class="footer-info-item"><a href="" target="고객센터">고객센터</a></li>
+                    <li class="footer-info-item"><a href="" target="공익제보(행정안전부)">공익제보(행정안전부)</a></li>
+                </ul><br> <!--ul 끼리 붙어 있어 줄바꿈이 생기지 않아서 넣어줌-->
+                <ul class="footer-info-list">
+                    <li class="footer-info-item">제단법인 굿아이디어</li>
+                    <li class="footer-info-item">대표 : 최정우</li>
+                    <li class="footer-info-item">사업자 등록번호 :199-40-91928</li>
+                    <li class="footer-info-item">통신판매업신고 : 2015-대전충남-1994호</li>
+                </ul><br>
+                <address class="footer-info-address">대전 충남 대덕대로 150 11층 (갈마동,창원빌딩) 대표전화 : 1588-8282</address>
+                <small class="footer-info_notice">
+                    재능 기부 및 직접기부의 진행과 리워드 제공의 책임은 해당 프로젝트의 개설자에게 있습니다. 굿아이디어는 해당 프로젝트의 당사자가 아니며, 리워드 제공에 대한 책임을 지지 않습니다.
+                </small>
+                <div class="footer-info-copyright">
+                    <a href="" class="footer-info-logo">
+                        <img src="img/company.png" class="company-logo" alt="LOGO">
+                    </a> <br>
+                    <span class="Copyright">Copyright © G&I Corp. All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</div>
+</div>
+</div>      
+
+</html>

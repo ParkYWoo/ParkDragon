@@ -1,0 +1,212 @@
+/* sub visual */
+.sub-header .deco-box {
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index:2;
+    overflow:hidden;
+}
+.sub-header .deco-box .deco-1 { /*서브 헤드 데코 1 왕관*/
+    position:absolute; 
+    left:50%; 
+    top:88px; 
+    margin-left:-10px; 
+    width:19px; 
+    height:21px; 
+    opacity:.8; 
+    background:url("../img/sub-header-deco-1.png") 0 0 no-repeat; background-size:cover; 
+}
+.sub-header .deco-box .deco-2 { /*서브 헤드 데코 2 삼각형*/
+    position:absolute; 
+    left:50%; 
+    top:44px; 
+    margin-left:-27px; 
+    width:225px; 
+    height:214px; 
+    opacity:.1;
+    background:url("../img/sub-header-deco-2.png") 0 0 no-repeat; background-size:cover;
+}
+/*서브 헤더 이미지 div class에 따라 이미지 변경 */
+.sub-header.sub-header-give {
+    background-image:url("../img/sub-header.png");
+}
+.sub-header.vis-news { 
+    background-image:url("/resources/images/sub/vis-news.jpg"); 
+}
+.sub-header.vis-about { 
+    background-image:url("/resources/images/sub/vis-about.jpg"); 
+}
+.sub-header.vis-mypage { 
+    background-image:url("/resources/images/sub/vis-mypage.jpg"); 
+}
+.sub-header.vis-etc { 
+    background-image:url("/resources/images/sub/vis-etc.jpg"); 
+}
+.sub-header.vis-mypage::before, .sub-header.vis-etc::before { 
+    display:none; 
+}
+
+.sub-header {
+    position:relative;
+    height:240px;
+    background-position:top center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    height: 290px;
+}
+
+.sub-header::before { /*서브 헤드 뒷 배경 무늬 패턴*/
+    content:''; 
+    position:absolute; 
+    left:0; 
+    right:0; 
+    bottom:0; 
+    top:0; 
+    z-index:1; 
+    background:#ffe0e06b url(../img/sub-header-pattern.png) center 0;
+}
+
+.sub-header .sub-title { 
+    position:relative; 
+    z-index:5; 
+    top:50%; 
+    transform:translateY(-50%); 
+    font-family:'Montserrat'; 
+    font-weight:700; 
+    font-size:31px; 
+    color:#fff; 
+    line-height:1; 
+    text-align:center;
+}
+
+.sub-header .sub-title { /*서브 헤더 글자 크기*/
+    padding: 22px 118px 0;
+    margin: 0 auto;
+    font-size: 42px;
+}
+.sub-header .deco-box .deco-1 { /*서브 헤더 왕관 크기 위치 */
+    /*
+    top: 45px; 
+    margin-left: -36px; 
+    width: 75px; 
+    height: 70px;
+    */
+    top: 62px;
+    margin-left: 12px;
+    width: 71px;
+    height: 70px;
+    transform: rotate(
+28deg);
+}
+.sub-header .deco-box .deco-2 {  /*서브 헤더 삼각형 위치*/
+    top:61px; 
+    margin-left:-42px; 
+    width:327px; 
+    height:310px; 
+}
+
+.sub-header .sub-menu { /*서브헤더 메뉴 창 크기*/
+    height: 50px;
+}
+
+.sub-header .sub-menu { 
+    position:absolute; 
+    left:0; 
+    right:0; 
+    bottom:0; 
+    z-index:101; 
+    font-size:0; 
+}
+
+.sub-header .sub-menu .menu-in { 
+    position:relative; 
+    left:0; 
+    right:0; 
+    top:0; 
+    padding:0; 
+    background:transparent; 
+    transition:all .3s; 
+}
+
+.sub-header .sub-menu .menu-in {
+    border-top: 1px solid rgba(255,255,255,.2);
+    border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+/*서브 헤더 메뉴 창*/
+
+.sub-header .sub-menu .menu-form { 
+    max-width:1440px; 
+    margin:0 auto; 
+    padding:0 20px; 
+    border: none;
+}
+
+.sub-header .sub-menu .menu-form > li { 
+    display:inline-block; 
+    vertical-align:top; 
+}
+
+.sub-header .sub-menu .menu-form > li {
+    position: relative;
+    background: transparent;
+}
+
+.sub-header .sub-menu .home > a { 
+    line-height:48px; 
+    padding:0 17px; 
+    border-left:1px solid rgba(255,255,255,.2); 
+    border-right:1px solid rgba(255,255,255,.2); 
+}
+.sub-header .sub-menu a, .sub-header .sub-menu button { /*버튼과 a class에만 적용*/
+    display:block; 
+    width:100%; 
+    text-align:left; 
+}
+
+.pos, .ir-b:before, .ir-a:after { display:inline-block; vertical-align:middle; background-position:999px 999px; background-repeat:no-repeat; font-size:0; }
+
+.pos { padding:0; margin:0; white-space:nowrap; font-size:1px; overflow:hidden; text-indent:-999px; color:transparent; line-height:0; }
+
+.pos, .ir-b:before, .ir-a:after { background-image:url("../img/btn-total.png"); }
+
+
+.i-home {
+    background-position: -624px 0;
+    width: 26px;
+    height: 25px;
+}
+
+.sub-header .sub-menu .dep {
+    border-right: 1px solid rgba(255,255,255,.2);
+}
+
+.sub-header .sub-menu .dep > a, .sub-header .sub-menu .dep > button { /*  background-color: transparent; border: 0; border-radius: 0;*/
+    min-width: 220px;
+    padding: 0 47px 0 19px;
+    line-height: 48px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.sub-header .sub-menu .dep[data-dropdown] > a::after, .sub-header .sub-menu .dep[data-dropdown] > button::after {
+    margin-top: -8px;
+}
+
+.sub-header .sub-menu .dep > a::after, .sub-header .sub-menu .dep > button::after {
+    content: '';
+    position: absolute;
+    right: 13px;
+    top: 53%;
+    margin-top: -6px;
+    width: 12px;
+    height: 12px;
+    border: 0 solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: translateY(2px) rotate( -45deg);
+    transition: none;
+}
+/*------------------------------------------------ 확정 구역 -----------------------------------------------------------*/

@@ -1,0 +1,856 @@
+@charset "utf-8";
+
+/*a 태그 색상 #999 에서 변경*/
+a { text-decoration:none; color:inherit; }
+a:hover { color:#666; }
+
+h1,h2,h3,h4,h5,h6 { font-size:100%; }
+/*string 사용하기 때문에 뺌*/
+address,strong{font-style:normal; font-weight:normal;}
+
+/*마우스 드레그 시 색상 변경*/
+::selection {
+    background-color: #db907a;
+    color: #FFFFFF;
+}
+
+@font-face{font-family:'NGothic'; src:url('../font/NanumGothic.woff') format('woff');}
+@font-face{font-family:'NGothicB'; src:url('../font/NanumGothicBold.woff') format('woff');}
+@font-face{font-family:'NGothicEB'; src:url('../font/NanumGothicExtraBold.woff') format('woff');}
+@font-face{font-family:'MaruBuri'; src:url('../font/MaruBuri-Regular.ttf') format('ttf');}
+@font-face {font-family: 'nanum'; src: url('../font/나눔손글씨\ 갈맷글.ttf') format('truetype');}
+
+
+#containar{ /*전체 바디 폼*/
+    position: relative;
+  /*  font-family: NanumBarunGothic,dotum,Sans-serif;  폰트는 보류 */
+    font-size: 14px;
+    line-height: 19px;
+    color: #202020;
+}
+
+#warp{ /*부 몸통 기준점 크기*/
+    min-width: 1140px;
+    box-sizing: border-box;
+}
+
+*, :after, :before{
+    box-sizing: border-box;
+}
+/*header  -------------------------------------------------------------*/
+
+/*로그인 및 메뉴 베너 */
+#header-header{
+    position: relative;
+    z-index: 30;
+}
+#header-main{	
+	border-bottom: 1px solid #f0f0f0;
+    background-color: #fff;
+    text-align: right;
+}
+#header-top{
+    position: relative;
+    width: 1140px;
+    height: 70px;
+    margin: 0 auto;
+}
+/* 로고 */
+.logo-box{
+    float: left;
+}
+.logo-img{
+    float: left;
+    width: 130px;
+    height: 70px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url(../img/heart.png);
+}
+.main-top-menu{
+    position: absolute;
+    top: 23px;
+    right: 100px;
+    left: 100px;
+    text-align: center;
+}
+.main-text{ /*메인 메뉴 글자*/
+    display: inline-block;
+    padding: 0 25px;
+    /* 나중에 폰트 조정  font-family: NanumSquareWebFont,dotum,Sans-serif; */ 
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #070808b5;
+}
+/*로그인 및 검색*/
+.login{
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    margin-top: 26px;
+    vertical-align: top;
+    color: #333;
+}
+.longbar{ /*로그인 검색 사이 | 막대 */
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    margin: 28px 12px 0;
+    background-color: #d8d8d8;
+    vertical-align: top;
+}
+.search-img{ /*검색 버튼*/
+    margin-top: 22px;
+    display: inline-block;
+    vertical-align: top;
+}
+/*몸통 내용*/
+#content{
+    position: relative;
+    z-index: 20;
+}
+/*배너 이미지------------------------------------------------------------*/
+.main-box{
+    overflow: hidden;
+    position: relative;
+    height: 332px;
+    border-top: 1px solid #e1e1e1;
+
+}
+.main-box2{
+	position: relative;
+    transition: background-color .5s;
+}
+.slick-slider{
+    position: relative;
+    display: block;
+
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+/*배너 왼쪽 오른쪽 버튼*/
+.ban-left-btn{
+    left: 50%;
+    margin: 35px 0 0 -620px;
+    width: 22px;
+    height: 44px;
+    z-index: 10;
+    box-sizing: content-box;
+
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    padding: 0;
+
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: rgba(0,0,0,0);
+    color: #ffffff;
+    font-size: 30px;
+    transform: rotate(
+        180deg) translateY(50%);
+}
+.ban-right-btn{
+    right: 50%;
+    margin: 35px -620px 0 0;
+    
+    width: 27px;
+    height: 44px;
+    position: absolute;
+    z-index: 10;
+    box-sizing: content-box;
+
+    line-height: 0;
+    top: 50%;
+    display: block;
+    padding: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: rgba(0,0,0,0);
+    color: #ffffff;
+    font-size: 30px;
+}
+.slick-list{
+    transform: translateZ(0);
+    overflow: visible;
+    /*표시용 지울것 ! */ background-color: rgb(231, 124, 124);
+}
+/*상위 배너 */
+.box-img{
+    position: relative;
+    display: block!important;
+    width: 1140px!important;
+    height: 300px;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.box-img-content{
+    display: block;
+    position: relative;
+    top: 40px;
+    width: 1140px;
+    height: 292px;
+    background-repeat: no-repeat;
+    background-size: auto 292px;
+    background-position: 50%;
+    background-image:url(../img/1.png);
+}
+
+/*후원금 사용 공개 내역-----------------------------------------------------*/
+.mid-money-clean-box{
+    z-index: 320;
+    width: 1140px;
+    margin: 30px auto 0;
+    clear: both;
+}
+.mid-money-clean-title{
+    border-width: 0px;
+    border-style: solid;
+    border-color: transparent;
+    text-align: center;
+}
+.mid-money-clean-title h3 {
+    font-size: 28px;
+    font-family: '__NanumGothicBold_5';
+    font-weight: 600;
+    color: #333;
+    letter-spacing: -1.5px;
+    text-align: center;
+}
+.mid-money-title-line{
+    width: 120px;
+    height: 3px;
+    background-color: #333;
+    position: relative;
+    margin: 30px auto 50px;
+}
+/*왼쪽 상자*/
+.mid-money-l-content-box{
+    width: 50%;
+    max-width: 700px;
+    float: left;
+}
+.mid-money-l-content-box ul{
+    width: 95%;
+    margin: 0 auto;
+    max-width: 960px;
+}
+.mid-money-l-content-box li{
+    float: left;
+    width: 33%;
+    padding: 0 2%;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #666;
+    text-align: center;
+    list-style: none;
+}
+.mid-money-l-content-box li img {
+    display: block;
+    margin: 0 auto 15px;
+    width: 100%;
+    max-width: 148px;
+    border: 0px;
+    border-style: solid;
+    transform-origin: left top;
+}
+/*오른쪽 상자*/
+.mid-money-r-content-box{
+    margin-top: 10px;
+    float: left;
+    width: 50%;
+    margin-bottom: 20px;
+}
+.mid-money-r-content-box p {
+    margin-left: 8.34%;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+    font-family: '__NanumGothicBold_5';
+    font-weight: 600;
+}
+.mid-r-content-btn{
+    margin-left: 8.34%;
+    margin-top: 44px;
+}
+.mid-r-content-btn .r-btn {
+    display: block;
+    width: 90%;
+    max-width: 400px;
+    text-align: left;
+
+    margin-bottom: 5px;
+    padding: 1px 20px;
+    -webkit-transition-duration: .2s;
+    -webkit-transition-delay: 0;
+    -webkit-transition-timing-function: ease;
+    transition-duration: .2s;
+    transition-delay: 0;
+    transition-timing-function: ease;
+    border-width: 0;
+    border-color: transparent;
+    background: #f60 no-repeat 24px 50%;
+    border-radius: 2px;
+    color: #fff;
+    line-height: 38px;
+    font-size: 16px;
+    text-align: center;
+    font-family: '__NanumGothicBold_5';
+    font-weight: 600;
+}
+/*임시 보류 파일*/
+.mid-money-box{
+    width: 1140px;
+    margin: 55px auto 0;
+    background-color: antiquewhite;
+    
+}
+
+/*기부 박스----------------------------------------------------------------*/
+.donation-box{
+    margin: 55px auto 0;
+    width: 1140px;
+}
+.donation-text-box{
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+/* 기부 박스 큰제목*/
+.donation-text{
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    color: inherit;
+}
+/*기부 박스 내용*/
+.donation-img-list{
+    overflow: hidden;
+    margin-top: 20px;
+    font-size: 0px; /*폰트에 따라서 display:inline-block 요소를 사용했을 때 공백이 생길 수 있다. 공백 제거법으로 상위클래스의 폰트크기를 없앤다.*/
+}
+.donation-img-list li {
+    margin-left:24px;
+}
+.donation-img-list li:first-child {
+    margin-left:0px;
+}
+
+.donation-card-list{
+    display: inline-block;
+    vertical-align: top;
+}
+.donation-card-a{
+    float: left;
+    position: relative;
+    width: 267px;
+    height: 363px;
+    border: 1px solid rgba(0,0,0,.11);
+    background-color: #fff;
+/* 폰트 보류    font-family: NanumSquareWebFont,dotum,Sans-serif; */
+}
+.donation-card-a::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+}
+.donation-card-a:hover {border-color: rgba(202, 33, 33, 0.33);} /*마우스를 올리면 테두리 색이 변경됨 / border: 1px solid red; 이런식으로 주면 테두가 추가되서 입체적 느낌을 줄 수 있다.*/
+
+.donation-card-pic{
+    width: 265px;
+    height: 200px;
+    background-color: #ccc;
+}
+.donation-card-content-box{
+    padding: 21px 20px 0;
+}
+.donation-card-content-title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    display: -webkit-box;
+    height: 50px;
+    line-height: 25px;
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 17px;
+    letter-spacing: -.5px;
+    color: #333;
+}
+.donation-comp{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 8px;
+    font-family: NanumBarunGothic,dotum,Sans-serif;
+    font-size: 15px;
+    color: #828282;
+}
+.donation-parameter-bar{
+    height: 5px;
+    margin-top: 13px;
+    background-color: #e8e8e8;
+}
+.donation-parameter-green{
+    display: inline-block;
+    height: 100%;
+    background-color: #10c838;
+    text-align: right;
+    vertical-align: top;
+}
+.donation-parameter-orange{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    background-color: #f69c00;
+    vertical-align: top;
+}
+.donation-parameter-num{
+    display: inline-block;
+    margin-top: 11px;
+    font-size: 17px;
+    letter-spacing: -.2px;
+    color: #00ab33;
+}
+.donation-parameter-money{
+    float: right;
+    margin-top: 11px;
+    font-size: 17px;
+    color: #333;
+}
+
+/*재능 기부-------------------------------------------------------------------------*/
+.ability-box{
+    margin: 70px auto 0;
+    width: 1140px;
+}
+.ability-box::after{
+    display: table;
+    table-layout: fixed;
+    clear: both;
+    content: "";
+}
+.ability-content-a{
+    float: left;
+    position: relative;
+    width: 364px;
+    height: 356px;
+    margin: 20px 24px 0 0;
+}
+.ability-box .ability-content-a:last-child{ /*ability-box의 마지막 박스에 magin을 주지않아 꽉 채운다.*/
+    margin:20px 0 0 0;
+}
+.ability-content-a::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid rgba(0,0,0,.11);
+    content: "";
+}
+.ability-content-pic{
+    width: 364px;
+    height: 242px;
+    background-color: #ccc;
+}
+.ability-content-text-box{
+    position: relative;
+    padding: 18px 100px 20px 20px;
+}
+.ability-content-compy{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 15px;
+    color: #828282;
+}
+.ability-content-text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    display: -webkit-box;
+    height: 50px;
+    line-height: 25px;
+    word-wrap: break-word;
+    word-break: keep-all;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-top: 6px;
+    font-size: 17px;
+    letter-spacing: -.5px;
+    color: #333;
+}
+.ability-content-small-img{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -33px;
+    border-radius: 50%;
+}
+.ability-content-gage{
+    position: absolute;
+    top: 50%;
+    height: 60px;
+    margin-top: -30px;
+    right: 20px;
+    width: 60px;
+    border: 1px solid #0f92e0;
+    border-radius: 50%;
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-size: 18px;
+    line-height: 60px;
+    letter-spacing: -.2px;
+    text-align: center;
+    color: #0f92e0;
+}
+/*기부 금액 현황-----------------------------------------------------*/
+.uses-today-box{
+    margin-top: 70px;
+    background-color: rgb(236, 193, 193);
+}
+.uses-today-sec-box{
+    position: relative;
+    width: 1140px;
+    margin: 0 auto;
+    padding: 45px 0;
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    line-height: 1.2;
+}
+.donation-today-h3{
+    display: inline-block;
+    padding: 6px 10px 4px;
+    border-radius: 15px;
+    background-color: #d88a87;
+    font-size: 17px;
+    color: hsla(0,0%,100%,.85);
+    vertical-align: top;
+}
+.donation-today-msg{
+    display: block;
+    margin-top: 24px;
+    font-size: 24px;
+    color: #fff;
+}
+.donation-today-text-box{
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 650px;
+    text-align: right;
+}
+.donation-today-text-small-box{
+    display: inline-block;
+    margin-bottom: 15px;
+    vertical-align: top;
+}
+.donation-today-text-small-box:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+/*오늘의 후원 금액 표시 글자 및 숫자*/
+.donation-t-msg-box{
+    float: left;
+    margin-right: 20px;
+    margin-left: 38px;
+}
+.donation-t-num-box{
+    overflow: hidden;
+}
+.donation-t-msg-box, .donation-t-num-box { /*2가지 클래스에 속성을 준다.*/
+    font-size: 18px;
+    line-height: 36px;
+    color: #9b7373;
+    font-weight: bolder;
+}
+.donation-today-text-small-box:nth-child(odd) .donation-t-num-box {
+    width: 130px;
+}
+.donation-today-text-small-box:nth-child(2n) .donation-t-num-box {
+    width: 220px;
+}
+.donation-t-money{
+    display: inline-block;
+    font-size: 33px;
+    font-weight: 700;
+    color: #af6e6e;
+    vertical-align: top;
+}
+/*함께하는 파트너----------------------------------------------------------------*/
+.partnerlogo-box{
+    position: relative;
+    overflow: hidden;
+    width: 1140px;
+    margin: 0 auto -96px;
+    padding: 40px 0 80px;
+}
+.partnerlogo-box:after, .partnerLogo-box:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    content: "";
+}
+.partnerlogo-box:before { /*로고 이미지 움직임*/
+    left: 0;
+    width: 238px;
+    background-image: linear-gradient(270deg,hsla(0,0%,100%,0),#fff 59%,#fff 0);
+}
+.partnerlogo-box:after { /*로고 이미지 움직임*/
+    right: 0;
+    width: 110px;
+    background-image: linear-gradient(90deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.5) 47%,#fff 95%);
+}
+.partnerlogo-title{
+    float: left;
+    position: relative;
+    z-index: 1;
+    margin-top: 15px;
+    font-family: 'nanum';
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 34px;
+    letter-spacing: -.5px;
+}
+.partnerlogo-link{
+    display: inline-block;
+    vertical-align: top;
+}
+.partnerlogo-list{
+    -webkit-animation: partnerlogo-list-img 60s linear infinite;
+    animation: partnerlogo-list-img 60s linear infinite;
+
+    -webkit-animation: 4s linear 0s infinite alternate move_eye;
+    animation: 4s linear 0s infinite alternate move_eye; /*0초는 시작 딜레이 = 0초면 바로 시작*/
+    white-space: nowrap;
+}
+/*-----------------------이미지 움직이기 작업--------------------------*/
+@-webkit-keyframes move_eye { 
+    from { margin-left: -20%; 
+    } to { 
+        margin-left: 100%; 
+    }  
+}
+@keyframes move_eye {
+    from { margin-left: -20%; 
+    } to { 
+        margin-left: 100%; 
+    }  
+}
+
+@keyframes slidein {
+    from {
+    margin-left: 100%;
+    width: 300%
+    }
+
+    to {
+        margin-left: 0%; 
+        width: 100%;
+    }
+}
+/*------------------------------------------------------------------*/
+.partnerlogo-list-img{
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    padding: 6px;
+    background-color: #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-origin: content-box;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: top;
+    background-image: url(../img/heart.png);
+}
+.partnerlogo-list-img::before{
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    margin-left: -1px;
+    vertical-align: middle;
+    content: "";
+}
+.partnerlogo-list-img::after{
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+border-radius: 50%;
+border: 1px solid rgba(0,0,0,.06);
+content: "";
+}
+.partnerlogo-list {
+    animation-duration: 3s;
+    animation-name: slidein;
+    
+}
+/*footer------------------------------------------------------------------------*/
+.footer-box{
+    position: relative;
+    z-index: 10;
+    margin-top: 96px;
+    padding-top: 52px;
+    border-top: 1px solid #e0e0e0;
+    background-clip: content-box;
+    background-color: #f6f6f6;
+    overflow: hidden;
+}
+.footer-box:before {
+    position: absolute;
+    top: 51px;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: #e3e3e3;
+    content: "";
+}
+.footer-top{
+    position: relative;
+    width: 1140px;
+    margin: -52px auto 0;
+    padding: 16px 0 15px;
+}
+.footer-top-box{
+    position: absolute;
+    top: 16px;
+    left: 0;
+    font-size: 15px;
+}
+.footer-top-box:after {
+    display: table;
+    table-layout: fixed;
+    clear: both;
+    content: "";
+}
+.footer-top-notice{
+    float: left;
+    width: 124px;
+    margin-right: 10px;
+    font-weight: 700;
+}
+.foorer-top-notice-text{
+    float: left;
+    color: #828282;
+}
+.icon-n{
+    display: inline-block;
+    width: 9px;
+    height: 11px;
+    margin-left: 7px;
+    color: #21ce55;
+}
+.service-info-box{
+    margin: 39px 0 18px;
+}
+.service-info-first-line{
+    position: relative;
+    padding: 0 94px 0 134px;
+    font-size: 0;
+    line-height: 0;
+}
+.service-info-first-line-title{
+    position: absolute;
+    top: 12px;
+    left: 0;
+    font-size: 14px;
+    line-height: 1.36;
+    font-weight: 700;
+}
+.service-info-first-line-item{
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.36;
+    color: #828282;
+}
+.service-info-first-line-item+.service-info-first-line-item::before{ /*first 차일드 개념인거같음*/
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    margin: 2px 12px 0 11px;
+    background-color: #d7d7d7;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;
+    content: "";
+}
+.footer-info-box{
+    position: relative;
+    padding: 26px 0 42px;
+    border-top: 1px solid #f0f0f0;
+    background-color: #fff;
+    font-size: 14px;
+    color: #828282;
+}
+.footer-info-inner{
+    width: 1140px;
+    margin: 0 auto;
+}
+.footer-info-list{
+    margin-top: 18px;
+}
+ul{
+    list-style: none;
+}
+.footer-info-item{
+    float: left;
+}
+.footer-info-item+.footer-info-item:before { /*첫번째 글 다음부터 | 으로 칸막이 부여*/
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    margin: 0 10px;
+    background-color: #d7d7d7;
+    vertical-align: -1px;
+    content: "";
+}
+.footer-info-address{
+    margin-top: 5px;
+    font-style: normal;
+}
+.footer-info_notice{
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+}
+.footer-info-logo{
+    margin-right: 7px;
+}
+.company-logo {
+    width: 220px;
+    position: absolute;
+    object-position: -25px -65px;
+    -webkit-filter: opacity(.5) drop-shadow(0 0 0 gray);
+    filter: opacity(.5) drop-shadow(0 0 0 gray);
+}
+.Copyright {
+    margin-left: 170px;
+    padding-bottom: 20px;
+}

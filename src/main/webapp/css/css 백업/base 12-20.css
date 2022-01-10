@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+a { text-decoration:none; color:#999; }
+a:hover { color:#666; }
+
+h1,h2,h3,h4,h5,h6 { font-size:100%; }
+address,strong{font-style:normal; font-weight:normal;}
+
+
+@font-face{font-family:'NGothic'; src:url('../font/NanumGothic.woff') format('woff');}
+@font-face{font-family:'NGothicB'; src:url('../font/NanumGothicBold.woff') format('woff');}
+@font-face{font-family:'NGothicEB'; src:url('../font/NanumGothicExtraBold.woff') format('woff');}
+@font-face{font-family:'MaruBuri-Regular'; src:url('../font/MaruBuri-Regular.ttf') format('ttf');}
+
+
+
+#containar{
+	margin:0 auto;
+	width:1600px;
+}
+
+/* 메인 메뉴 고정 1*/
+#main_fix{				/*메인 메뉴는 휠 내려도 따라오게 한다 메인메뉴들을 전부 감싼다.*/
+	position:fixed;
+    width:1500px; /*굳이 주지 않아도 containar에 사이즈 맞춰지지만 화면이 작아지면 축소하므로 고정한다 */
+	height:70px;
+	top:0;
+}	
+	
+#main_top{
+    position: relative;
+    width: 1140px;
+    height: 70px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    text-align: right;
+}
+
+.main_top_menu{
+    position: absolute;
+    top: 23px;
+    right: 100px;
+    left: 100px;
+    text-align: center;
+}
+
+.main_top_menu li{display:inline}
+
+.main_top_menu li a{
+/*	display:inline-block; /*공간을 주고 싶으면 inline-block 사용 */ 
+	width:80px;
+	font-size:18px;
+	text-align:center;
+    color: #000;
+}
+
+.main_top_menu li:last-child a{ /*main_top_manu li의 마지막 a태그 안의 border의 속성값을 주지 않겠다. */
+	border:none;
+}
+.logo{
+    float: left;
+    margin-top: 26px;
+
+}
+
+.main-text{ /*메인 메뉴 글자*/
+    display: inline-block;
+    padding: 0 25px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #000;
+}
+
+/*로그인 및 검색*/
+.login{ /*로그인*/
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    margin-top: 26px;
+    vertical-align: top;
+    color: #333;
+}
+
+.longbar{ /*로그인 검색 사이 | 막대 */
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    margin: 28px 12px 0;
+    background-color: #d8d8d8;
+    vertical-align: top;
+}
+
+.search-img{ /*검색 버튼*/
+    margin-top: 18px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 24px;
+    color: #333;
+}
+
+#maing_img_box{
+    overflow: hidden;
+    position: relative;
+    height: 332px;
+    margin-top: 70px;
+    border-top: 1px solid #e1e1e1;
+}
+
+#main_bottom{
+	height:300px;
+    background-color: rgb(62, 158, 158);
+	margin-top:70px;
+}
+
+#main_content{
+    display: block;
+    position: relative;
+    top: 40px;
+    left: 180px;
+    width: 1140px;
+    height: 292px;
+    background-repeat: no-repeat;
+    background-size: auto 292px;
+    background-position: 50%;
+    background-color: aquamarine;
+    
+}
+
+#main_banner_num{
+    position: absolute;
+    left: 50%;
+    bottom: 13px;
+    height: 18px;
+    margin-left: -480px;
+}
+
+#main_banner_bar{
+    position: relative;
+    width: 50px;
+    height: 1px;
+    margin: 8px 0 0 20px;
+    background-color: rgba(0,0,0,.3);
+}

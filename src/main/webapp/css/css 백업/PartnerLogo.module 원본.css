@@ -1,0 +1,149 @@
+.PartnerLogo_wrap__fm3y8 {
+  position: relative;
+  overflow: hidden;
+  width: 1140px;
+  margin: 0 auto -96px;
+  padding: 40px 0 80px;
+}
+
+.PartnerLogo_wrap__fm3y8::before, .PartnerLogo_wrap__fm3y8::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+  content: "";
+}
+
+.PartnerLogo_wrap__fm3y8::before {
+  left: 0;
+  width: 238px;
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0), #fff 59%, #fff 1%);
+}
+
+.PartnerLogo_wrap__fm3y8::after {
+  right: 0;
+  width: 110px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 47%, #fff 95%);
+}
+
+.PartnerLogo_title__WdODE {
+  float: left;
+  position: relative;
+  z-index: 1;
+  margin-top: 15px;
+  font-family: NanumSquareWebFont, dotum, Sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 34px;
+  letter-spacing: -0.5px;
+}
+
+.PartnerLogo_icon__2q6sd, .PartnerLogo_link_partner__3pnSo {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.icon { /*함께 하는 파트너 글자  옆 >*/
+  position: relative;
+  display: inline-block;
+  width: 12px;
+  height: 24px;
+  margin: 4px 0 0 6px;
+  vertical-align: top;
+}
+
+.icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+  margin-left: -4px;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+}
+
+.PartnerLogo_list__2INut  { /*로고리스트에 애니메이션을 준다. / 이름은 move_left / 시간은 60초 /속도 조절은 평균 / 무한 반복/ */
+  animation: move_left 60s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes move_left {
+  0% {
+    transform: translateX(0); /*x축이 0에서 시작해서*/
+  }
+  100% {
+    transform: translateX(-50%); /*100% = 끝날 때 x축이 -50퍼 이동한다.*/
+  }
+}
+
+.PartnerLogo_list__2INut:hover  { /*마우스를 올리면 애니메이션이 멈춘다.*/
+  animation-play-state: paused;
+}
+
+.PartnerLogo_link__1rpKs {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  padding: 6px;
+  background-color: #fff;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-origin: content-box;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: top;
+}
+
+.PartnerLogo_link__1rpKs:before {
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  margin-left: -1px;
+  vertical-align: middle;
+  content: "";
+}
+
+.PartnerLogo_link__1rpKs:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  content: "";
+}
+
+.PartnerLogo_link__1rpKs ~ .PartnerLogo_link__1rpKs {
+  margin-left: 28px;
+}
+
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  display: -webkit-box;
+  max-height: 48px;
+  line-height: 16px;
+  word-wrap: break-word;
+  word-break: break-all;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  display: inline-block;
+  padding: 0 13px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.3px;
+  word-break: break-all;
+  white-space: normal;
+  vertical-align: middle;
+}

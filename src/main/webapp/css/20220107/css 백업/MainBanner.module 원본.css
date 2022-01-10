@@ -1,0 +1,146 @@
+.wrap {
+    overflow: hidden;
+    position: relative;
+    height: 332px;
+    border-top: 1px solid #e1e1e1
+}
+
+.inner {
+    position: relative;
+    transition: background-color 0.5s
+}
+
+.inner :global(.slick-list) {
+    overflow: visible
+}
+
+.inner :global(.slick-arrow) {
+    position: relative;
+    display: inline-block;
+    width: 22px;
+    height: 44px;
+    position: absolute;
+    z-index: 10;
+    padding: 10px;
+    box-sizing: content-box
+}
+
+.inner :global(.slick-arrow)::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 29px;
+    height: 29px;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+    margin-left: 10px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff
+}
+
+@media (max-width: 1220px) {
+    .inner :global(.slick-arrow) {
+        background-color:rgba(0,0,0,0.15)
+    }
+}
+
+.inner :global(.slick-prev) {
+    left: 50%;
+    margin: 35px 0 0 -620px
+}
+
+@media (max-width: 1220px) {
+    .inner :global(.slick-prev) {
+        margin-left:-570px
+    }
+}
+
+.inner :global(.slick-next) {
+    right: 50%;
+    margin: 35px -620px 0 0;
+    transform: rotate(180deg) translateY(50%)
+}
+
+@media (max-width: 1220px) {
+    .inner :global(.slick-next) {
+        margin-right:-570px
+    }
+}
+
+.banner {
+    position: relative;
+    display: block !important;
+    width: 1140px !important;
+    height: 300px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.link {
+    display: block;
+    position: relative;
+    top: 40px;
+    width: 1140px;
+    height: 292px;
+    background-repeat: no-repeat;
+    background-size: auto 292px;
+    background-position: 50%
+}
+
+.progress {
+    position: absolute;
+    left: 50%;
+    bottom: 13px;
+    height: 18px;
+    margin-left: -480px
+}
+
+.progress_bar {
+    position: relative;
+    width: 50px;
+    height: 1px;
+    margin: 8px 0 0 20px;
+    background-color: rgba(0,0,0,0.3)
+}
+
+.bar_current {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4)
+}
+
+.progress_current,.progress_total {
+    position: absolute;
+    top: 0;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px
+}
+
+.progress_current {
+    right: 55px;
+    color: #000
+}
+
+.progress_total {
+    left: 76px;
+    color: rgba(0,0,0,0.5)
+}
+
+.button_progress {
+    position: absolute;
+    top: -1px;
+    z-index: 10;
+    left: 95px;
+    width: 20px;
+    height: 20px;
+    background: url(~svg/pc/icons/icon_banner_stop.svg) no-repeat;
+    background-size: 100%
+}
+
+.button_progress:global(.is_paused) {
+    background-image: url(~svg/pc/icons/icon_banner_play.svg)
+}

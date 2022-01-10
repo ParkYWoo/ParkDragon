@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="find_id.css">
+</head>
+<body>
+    <section class="find_id_form">
+        <h1>아이디 찾기</h1>
+        <form name="member">
+            <div class="find_id_form_2">
+         
+                  <input type="radio" name="find_id" id="phone" value="phone"><label for="phone"><span style="font-size:30px; color:gray;">핸드폰으로 찾기</span></label>
+                  <div class="int_area">
+                    <label for="name" onclick="name"> 성&nbsp;&nbsp;명</label>
+                  <input type="text" name="t_name" id="name" autocomplete="off"><br>
+                
+                  <label for="tell" onclick="tell">핸드폰</label>
+                  <input type="text" name="t_phone" id="tell" autocomplete="off">
+                  
+
+                </div><br><br>
+                
+                    <input type="radio" name="find_id" id="find_email" value="email"><label for="find_email"><span style="font-size:30px; color:gray;">이메일로 찾기</span></label>
+                    <div class="int_area">
+                        <label for="email_name" onclick="email_name"> 성&nbsp;&nbsp;명</label>
+                    <input type="text" name="t_name" id="email_name" autocomplete="off"><br>
+                   
+                    <label for="email" onclick="email">이메일 </label>
+                    <input type="text" name="t_email" id="email" autocomplete="off"><br>
+                  
+  
+                    
+                  </div>
+                  <div class="btn_area">
+                  <button type="submit" onclick="실명인증.html">인증하기</button>
+                </div>
+            </div>
+                </form>
+      
+    </section>
+</body>
+</html>

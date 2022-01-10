@@ -1,0 +1,143 @@
+.header-header-1 { /*.header*/
+    position: relative;
+    z-index: 30
+}
+
+.header-header-1.is-scroll { /*:global .is-scroll*/
+    padding-top: 70px
+}
+
+.header-header-1.is-scroll [class*="header-main"] { /* :global .is-scroll [class*='gnb'] */
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 30;
+    border-bottom: 1px solid #e8e8e8
+}
+@keyframes header-header-1is-scroll {
+    0% {
+      top: -5rem;
+    }
+    100% {
+      top: 0;
+    }
+  }
+
+#header-main { /*.gnb */
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #fff;
+    text-align: right;
+}
+
+#header-top { /*.inner */
+    position: relative;
+    width: 1140px;
+    height: 70px;
+    margin: 0 auto
+}
+
+#header-top::after {
+    display: table;
+    table-layout: fixed;
+    clear: both;
+    content: ''
+}
+
+.logo-box { /*.logo*/
+    float: left;
+   /* margin-top: 21px 크기가 맞지 않음*/
+}
+
+.logo svg { /* .logo svg */
+    display: inline-block;
+    vertical-align: top
+}
+
+.search-img { /* .btn_search */
+    margin-top: 22px;
+    display: inline-block;
+    vertical-align: top;
+}
+/*-------------------------------------*/
+.main-text { /* .item  */
+    display: inline-block;
+    padding: 0 25px;
+    font-family: NanumSquareWebFont,dotum,Sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #000
+}
+
+.item[aria-current='true'],.item:hover,.item:focus {
+    color: #00ab33
+}
+
+.main-top-menu { /*.menu*/
+    position: absolute;
+    top: 23px;
+    right: 100px;
+    left: 100px;
+    text-align: center
+}
+
+/* 유저 정보 */
+
+.wrap {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    margin: 20px -2px 0 0;
+    line-height: 30px
+}
+
+.img {
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    margin-right: 4px;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    vertical-align: middle
+}
+
+.id {
+    display: inline-block;
+    position: relative;
+    vertical-align: top
+}
+
+.id::after {
+    vertical-align: middle;
+    content: '님'
+}
+
+.id .ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 88px;
+    vertical-align: middle
+}
+
+.login { /* .btn_login */
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    margin-top: 26px;
+    vertical-align: top;
+    color: #333;
+    font-weight: bold;
+    font-family: 'maru-buri-reg';
+}
+
+.bar { /*.bar */ /*로그인 검색 사이 | 막대 */
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    margin: 28px 12px 0;
+    background-color: #d8d8d8;
+    vertical-align: top;
+}
